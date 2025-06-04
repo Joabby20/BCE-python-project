@@ -1,49 +1,68 @@
-.loginPage {
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.loginBox {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f4f8;
+    min-width: 320px;
 }
 
-.loginForm {
-    background-color: white;
-    padding: 20px;
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3a4b;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #b0bec5;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
 }
 
-.inputField {
-    margin-bottom: 15px;
-    width: 100%;
+.input:focus {
+    border-color: #1976d2;
 }
 
-.inputField input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.submitButton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
+.button {
+    padding: 0.75rem 1rem;
+    background: #1976d2;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
+    transition: background 0.2s;
 }
 
-.submitButton:hover {
-    background-color: #45a049;
+.button:hover {
+    background: #1565c0;
 }
 
-.errorMessage {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
+.error {
+    color: #d32f2f;
+    font-size: 0.95rem;
+    text-align: center;
 }

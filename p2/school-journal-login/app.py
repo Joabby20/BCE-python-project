@@ -1,81 +1,135 @@
-from flask import Flask, render_template_string, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session
+import json
+import os
+from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace with a secure key in production
+app.secret_key = 'your_secret_key'
+DATA_FILE = 'users_data.json'
 
-# Simple user for demonstration
-USER = {'username': 'student', 'password': 'journal123'}
+@app.route('/')
+def home():
+    return render_template('home page.html')
 
-# HTML template for the journal page
-JOURNAL_HTML = """<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"><title>My Journal</title><style>body { font-family: Arial, sans-serif; background: #f0f4f8; }
-        .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);}
-        h2 { color: #1976d2; }
-        textarea { width: 100%; height: 120px; border-radius: 8px; border: 1px solid #b0bec5; padding: 1rem; font-size: 1rem; }
-        button { background: #1976d2; color: #fff; border: none; border-radius: 8px; padding: 0.75rem 1.5rem; font-size: 1rem; margin-top: 1rem; cursor: pointer;}
-        .entry { background: #e3f2fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;}
-        .logout { float: right; color: #1976d2; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <a href="{{ url_for('logout') }}" class="logout">Logout</a>
-        <h2>Welcome, {{ user }}!</h2>
-        <form method="post">
-            <textarea name="entry" placeholder="Write your journal entry here..." required></textarea>
-            <button type="submit">Save Entry</button>
-        </form>
-        <h3>Your Entries:</h3>
-        {% for e in entries %}
-            <div class="entry">{{ e }}</div>
-        {% else %}
-            <p>No entries yet.</p>
-        {% endfor %}
-    </div>
-</body>
-</html>
-"""
-
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if 'user' in session:
         return redirect(url_for('journal'))
     error = ''
     if request.method == 'POST':
-        username = request.form.get('username', '')
-        password = request.form.get('password', '')
-        if username == USER['username'] and password == USER['password']:
+        username = request.form['username']
+        password = request.form['password']
+        data = load_data()
+        if username in data and data[username]['password'] == password:
             session['user'] = username
-            session['entries'] = []
-            return redirect(url_for('journal'))
+            return redirect(url_for('journal'))  # <-- This line opens the journal page after login
         else:
             error = 'Invalid username or password.'
-    return '''
-    <form method="post">
-        <h2>Login to Your Journal</h2>
-        <p style="color:red;">{}</p>
-        <input name="username" placeholder="Username" required><br><br>
-        <input name="password" type="password" placeholder="Password" required><br><br>
-        <button type="submit">Login</button>
-    </form>
-    '''.format(error)
+    return render_template('login.html', error=error)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    error = ''
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        data = load_data()
+        if username in data:
+            error = 'Username already exists.'
+        else:
+            data[username] = {'password': password, 'entries': []}
+            save_data(data)
+            return redirect(url_for('login'))
+    return render_template('register.html', error=error)
+
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    msg = ''
+    if request.method == 'POST':
+        new_password = request.form['new_password']
+        data = load_data()
+        data[session['user']]['password'] = new_password
+        save_data(data)
+        msg = 'Password changed successfully.'
+    return render_template('profile.html', user=session['user'], msg=msg)
 
 @app.route('/journal', methods=['GET', 'POST'])
 def journal():
     if 'user' not in session:
         return redirect(url_for('login'))
+    data = load_data()
+    user = session['user']
+    today = datetime.now().strftime('%Y-%m-%d')
     if request.method == 'POST':
-        entry = request.form.get('entry', '').strip()
-        if entry:
-            session['entries'].append(entry)
-    return render_template_string(JOURNAL_HTML, user=session['user'], entries=session['entries'])
+        entry = {
+            'date': request.form['date'],
+            'subject': request.form['subject'],
+            'learnt': request.form['learnt'],
+            'challenges': request.form['challenges'],
+            'schedule': request.form['schedule']
+        }
+        data[user]['entries'].append(entry)
+        save_data(data)
+        return redirect(url_for('journal'))
+    entries = list(enumerate(data[user]['entries']))
+    search_date = request.args.get('search_date', '').strip()
+    search_subject = request.args.get('search_subject', '').strip().lower()
+    if search_date:
+        entries = [e for e in entries if e[1]['date'] == search_date]
+    if search_subject:
+        entries = [e for e in entries if search_subject in e[1]['subject'].lower()]
+    entries = reversed(entries)
+    return render_template('journal.html', user=user, entries=entries, today=today, request=request)
+
+@app.route('/delete_entry/<int:idx>')
+def delete_entry(idx):
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    data = load_data()
+    user = session['user']
+    if 0 <= idx < len(data[user]['entries']):
+        del data[user]['entries'][idx]
+        save_data(data)
+    return redirect(url_for('journal'))
+
+@app.route('/edit_entry/<int:idx>', methods=['GET', 'POST'])
+def edit_entry(idx):
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    data = load_data()
+    user = session['user']
+    if not (0 <= idx < len(data[user]['entries'])):
+        return redirect(url_for('journal'))
+    entry = data[user]['entries'][idx]
+    if request.method == 'POST':
+        entry['date'] = request.form['date']
+        entry['subject'] = request.form['subject']
+        entry['learnt'] = request.form['learnt']
+        entry['challenges'] = request.form['challenges']
+        entry['schedule'] = request.form['schedule']
+        save_data(data)
+        return redirect(url_for('journal'))
+    return render_template('edit_entry.html', entry=entry)
 
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('login'))
 
+def load_data():
+    if not os.path.exists(DATA_FILE):
+        return {}
+    with open(DATA_FILE, 'r') as f:
+        return json.load(f)
+
+def save_data(data):
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 # To run the application, save this code in a file named app.py and run it using:
-# python app.py  
+# python app.py
+
