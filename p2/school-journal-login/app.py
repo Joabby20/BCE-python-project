@@ -5,7 +5,7 @@ from flask_limiter.util import get_remote_address
 import sqlite3
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import timedelta
+from datetime import timedelta, datetime
 from pathlib import Path
 from urls import main
 from database import init_db, get_db, close_db
@@ -426,6 +426,10 @@ def delete_journal_entry(entry_id, user_id):
     close_db(conn)
 
 if __name__ == '__main__':
+    @app.context_processor
+    def inject_current_year():
+        return dict(current_year=datetime.now().year)
+
     app.run(debug=True, port=5001)
 # To run the application, save this code in a file named app.py and run it using:
 # python app.py

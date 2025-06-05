@@ -1598,3 +1598,38 @@ sqlite3.OperationalError: no such table: courses
 2025-06-05 11:29:54,550 - database - DEBUG - Getting database connection
 2025-06-05 11:29:54,550 - database - DEBUG - Closing database connection
 2025-06-05 11:29:54,568 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:54] "GET /journal HTTP/1.1" 200 -
+2025-06-05 11:41:07,178 - urls - DEBUG - User logged out successfully
+2025-06-05 11:41:07,193 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:41:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-05 11:41:07,214 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:41:07] "GET / HTTP/1.1" 200 -
+2025-06-05 11:41:10,421 - urls - DEBUG - Rendering login page
+2025-06-05 11:41:10,423 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:41:10] "GET /login HTTP/1.1" 200 -
+2025-06-05 11:41:14,884 - urls - DEBUG - Rendering register page
+2025-06-05 11:41:14,887 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:41:14] "GET /register HTTP/1.1" 200 -
+2025-06-05 11:41:23,210 - urls - DEBUG - Rendering register page
+2025-06-05 11:41:23,223 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:41:23] "GET /register HTTP/1.1" 200 -
+2025-06-05 11:47:38,390 - urls - DEBUG - Rendering login page
+2025-06-05 11:47:38,391 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:47:38] "GET /login HTTP/1.1" 200 -
+2025-06-05 11:47:41,425 - urls - DEBUG - Login attempt for username: davie504
+2025-06-05 11:47:41,547 - business - DEBUG - Attempting login for user: davie504
+2025-06-05 11:47:41,549 - database - DEBUG - Getting database connection
+2025-06-05 11:47:41,872 - business - INFO - Login successful for user: davie504
+2025-06-05 11:47:41,874 - database - DEBUG - Closing database connection
+2025-06-05 11:47:41,876 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x00000295C30D6CE0>
+2025-06-05 11:47:41,876 - urls - DEBUG - Login successful for user: davie504
+2025-06-05 11:47:41,876 - urls - DEBUG - Session contents after login: {'_permanent': True, 'user': 'davie504', 'user_id': 3}
+2025-06-05 11:47:41,876 - urls - DEBUG - Redirecting to dashboard page
+2025-06-05 11:47:41,887 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:47:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 11:47:41,904 - database - DEBUG - Getting database connection
+2025-06-05 11:47:41,909 - database - DEBUG - Closing database connection
+2025-06-05 11:47:41,914 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:47:41] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:52:16,711 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\app.py', reloading
+2025-06-05 11:52:16,957 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 11:52:21,061 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 11:52:21,073 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 11:52:25,770 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\app.py', reloading
+2025-06-05 11:52:26,159 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 11:52:28,452 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 11:52:28,466 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 11:52:48,451 - database - DEBUG - Getting database connection
+2025-06-05 11:52:48,487 - database - DEBUG - Closing database connection
+2025-06-05 11:52:48,818 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:52:48] "GET /dashboard HTTP/1.1" 200 -
