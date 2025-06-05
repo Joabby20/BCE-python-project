@@ -121,28 +121,7 @@ def add_course():
         flash('An unexpected error occurred', 'error')
         return redirect(url_for('main.dashboard'))
 
-@main.route('/course/delete/<int:course_id>', methods=['POST'])
-def delete_course_route(course_id):
-    try:
-        if 'user' not in session:
-            flash('Please log in first', 'error')
-            return redirect(url_for('main.login'))
-        
-        try:
-            if delete_course(course_id, session['user_id']):
-                flash('Course deleted successfully', 'success')
-            else:
-                flash('Course not found', 'error')
-        except sqlite3.Error as e:
-            logger.error(f"Database error while deleting course: {str(e)}")
-            flash('Database error occurred', 'error')
-            
-        return redirect(url_for('main.dashboard'))
-        
-    except Exception as e:
-        logger.error(f"Delete course error: {str(e)}")
-        flash('An unexpected error occurred', 'error')
-        return redirect(url_for('main.dashboard'))
+
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
@@ -173,8 +152,8 @@ def login():
                 logger.debug(f"Session contents after login: {dict(session)}")
                 
                 flash('Welcome back!', 'success')
-                logger.debug("Redirecting to journal page")
-                return redirect(url_for('main.journal'))
+                logger.debug("Redirecting to dashboard page")
+                return redirect(url_for('main.dashboard'))
             else:
                 logger.debug(f"Login failed for username: {username}")
                 flash('Invalid username or password', 'error')

@@ -1,156 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Student Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            background: #007bff;
-            color: white;
-            border-radius: 8px 8px 0 0;
-        }
-        .welcome {
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        .courses-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .courses-table th, .courses-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .courses-table th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-        }
-        .add-course-form {
-            margin: 20px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            color: white;
-        }
-        .btn-danger {
-            background-color: #dc3545;
-            color: white;
-        }
-        .btn:hover {
-            opacity: 0.9;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Student Dashboard</h1>
-        </div>
-        
-        <div class="navigation">
-            <a href="{{ url_for('main.courses') }}" class="nav-link">Manage Courses</a>
-        </div>
-        
-        <div class="welcome">
-            <h2>Welcome, {{ user }}</h2>
-        </div>
+{% extends 'base.html' %}
 
-        <div class="add-course-form">
-            <h3>Add New Course</h3>
-            <form action="{{ url_for('main.add_course') }}" method="POST">
-                <div class="form-group">
-                    <label for="course_name">Course Name:</label>
-                    <input type="text" id="course_name" name="course_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="semester">Semester:</label>
-                    <input type="text" id="semester" name="semester" required>
-                </div>
-                <div class="form-group">
-                    <label for="credits">Credits:</label>
-                    <input type="number" id="credits" name="credits" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Course</button>
-            </form>
-        </div>
+{% block title %}Dashboard{% endblock %}
 
-        <h2>My Courses</h2>
-        <table class="courses-table">
-            <thead>
-                <tr>
-                    <th>Course Name</th>
-                    <th>Semester</th>
-                    <th>Credits</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in courses %}
-                <tr>
-                    <td>{{ course.course_name }}</td>
-                    <td>{{ course.semester }}</td>
-                    <td>{{ course.credits }}</td>
-                    <td>
-                        <form action="{{ url_for('main.delete_course_route', course_id=course.id) }}" method="POST" style="display: inline;">
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this course?')">
-                                Delete
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+{% block content %}
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="mb-3">Welcome, {{ session['user'] }}</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Your Courses</h5>
+                        </div>
+                        <div class="card-body">
+                            {% if courses %}
+                                <ul class="list-group list-group-flush">
+                                    {% for course in courses %}
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span>{{ course.name }}</span>
+                                            <a href="{{ url_for('main.courses') }}" class="btn btn-sm btn-primary">Manage</a>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p class="text-muted">No courses added yet.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Recent Journal Entries</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">View your latest journal entries and progress.</p>
+                            <a href="{{ url_for('main.journal') }}" class="btn btn-primary">View Journal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-</body>
-</html>
+{% endblock %}

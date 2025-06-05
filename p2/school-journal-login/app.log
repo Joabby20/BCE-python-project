@@ -1015,3 +1015,54 @@ UnboundLocalError: cannot access local variable 'conn' where it is not associate
 2025-06-05 09:25:08,076 - werkzeug - INFO -  * Debugger PIN: 800-876-390
 2025-06-05 09:25:29,685 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
 2025-06-05 09:25:29,824 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:34:41,861 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:34:41,864 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:34:41,867 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:34:45,932 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:34:45,980 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:34:52,643 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:34:52] "GET / HTTP/1.1" 200 -
+2025-06-05 09:34:56,122 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:34:56,126 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:34:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:34:56,143 - database - DEBUG - Getting database connection
+2025-06-05 09:34:56,148 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:34:56,175 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:34:56] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:35:17,684 - urls - DEBUG - User not logged in
+2025-06-05 09:35:17,691 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:35:17] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 09:35:17,708 - urls - DEBUG - Rendering login page
+2025-06-05 09:35:17,727 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:35:17] "GET /login HTTP/1.1" 200 -
+2025-06-05 09:35:19,750 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 09:35:19,750 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 09:35:19,753 - database - DEBUG - Getting database connection
+2025-06-05 09:35:21,297 - business - INFO - Login successful for user: ps19
+2025-06-05 09:35:21,298 - database - DEBUG - Closing database connection
+2025-06-05 09:35:21,298 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x0000015F3EC7D3C0>
+2025-06-05 09:35:21,300 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 09:35:21,300 - urls - DEBUG - Session contents after login: {'_flashes': [('error', 'Please log in first')], '_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 09:35:21,302 - urls - DEBUG - Redirecting to journal page
+2025-06-05 09:35:21,303 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:35:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 09:35:21,321 - database - DEBUG - Getting database connection
+2025-06-05 09:35:21,323 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:35:21,328 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:35:21] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:41:39,549 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 09:41:40,041 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:41:42,178 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:41:42,190 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:43:33,099 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:43:33,100 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:43:33,104 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:43:34,991 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:43:35,022 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:43:39,245 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:43:39] "GET / HTTP/1.1" 200 -
+2025-06-05 09:43:41,112 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:43:41,119 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:43:41] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:43:41,138 - database - DEBUG - Getting database connection
+2025-06-05 09:43:41,157 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:43:41,241 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:43:41] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:44:50,354 - database - DEBUG - Getting database connection
+2025-06-05 09:44:50,363 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:44:50,387 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:44:50] "GET /journal?search_date=&search_subject=computer HTTP/1.1" 200 -
+2025-06-05 09:45:18,645 - database - DEBUG - Getting database connection
+2025-06-05 09:45:18,648 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:45:18,650 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:45:18] "GET /journal?search_date=&search_subject=french HTTP/1.1" 200 -
