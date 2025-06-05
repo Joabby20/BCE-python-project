@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>My Journal</title>
+    <title>School Journal</title>
     <style>
         body {
             min-height: 100vh;
@@ -20,7 +19,7 @@
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
             min-width: 320px;
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -35,130 +34,190 @@
             letter-spacing: 1px;
         }
         
-        h3 {
-            margin-top: 2rem;
+        .welcome-message {
             color: #1976d2;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
         
-        form {
+        .form-group {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            margin-bottom: 1rem;
         }
         
-        input,
-        textarea {
-            padding: 0.75rem 1rem;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2d3a4b;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
             border: 1px solid #b0bec5;
             border-radius: 8px;
             font-size: 1rem;
             outline: none;
             transition: border 0.2s;
-            width: 100%;
-            box-sizing: border-box;
         }
         
-        input:focus,
-        textarea:focus {
+        input:focus, textarea:focus {
             border-color: #1976d2;
         }
         
-        button {
-            padding: 0.75rem 1rem;
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem;
             background: #1976d2;
-            color: #fff;
+            color: white;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
-            font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
         }
         
-        button:hover {
+        .submit-btn:hover {
             background: #1565c0;
         }
         
-        p {
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        .error {
-            color: #d32f2f;
-            font-size: 0.95rem;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        a {
-            color: #1976d2;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+        .entries {
+            width: 100%;
+            margin-top: 2rem;
         }
         
         .entry {
-            border: 1px solid #ccc;
-            margin: 10px 0;
-            padding: 10px;
+            background: #f5f5f5;
+            padding: 1rem;
             border-radius: 8px;
-            background: #f7fbff;
-            width: 100%;
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .entry-date {
+            color: #666;
+            font-size: 0.9rem;
         }
         
         .entry-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .edit-btn, .delete-btn {
+            padding: 0.25rem 0.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .edit-btn {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .delete-btn {
+            background: #f44336;
+            color: white;
+        }
+        
+        .search-bar {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .search-btn {
             margin-top: 0.5rem;
+            padding: 0.5rem;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .search-btn:hover {
+            background: #1565c0;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h2>Welcome</h2>
-        <p>
-            <a href="{{ url_for('profile') }}">Manage Profile</a> |
-            <a href="{{ url_for('logout') }}">Logout</a>
-        </p>
-        <h3>New Daily Entry</h3>
-        <form method="post" action="{{ url_for('journal') }}">
-            <label>Date:</label>
-            <input name="date" type="date" value="{{ today }}" required>
-            <label>Subject Covered:</label>
-            <input name="subject" required>
-            <label>Things Learnt:</label>
-            <textarea name="learnt" required></textarea>
-            <label>Challenges for the Day:</label>
-            <textarea name="challenges" required></textarea>
-            <label>Class Schedule Overview:</label>
-            <textarea name="schedule" required></textarea>
-            <button type="submit">Save Entry</button>
-        </form>
-        <h3>Search Entries</h3>
-        <form method="get" action="{{ url_for('journal') }}">
-            <input type="date" name="search_date" value=< input type="text" name="search_subject" placeholder="Subject" value="{{ request.args.get('search_subject', '') }}">
-            <button type="submit">Search</button>
-            <a href="{{ url_for('journal') }}">Clear</a>
-        </form>
-        <h3>Your Entries</h3>
-        <div class="entry">
-            <b>Date:</b> <br>
-            <b>Subject Covered:</b><br>
-            <b>Things Learnt:</b><br>
-            <b>Challenges:</b><br>
-            <b>Class Schedule:</b><br>
-            <div class="entry-actions">
-                <a href="{{ url_for('edit_entry', idx=idx) }}">Edit</a> |
-                <a href="{{ url_for('delete_entry', idx=idx) }}" onclick="return confirm('Delete this entry?');">Delete</a>
-            </div>
+        <h2>School Journal</h2>
+        <div class="welcome-message">
+            Welcome {{ session['user'] }}! Start adding your first journal entry.
         </div>
-
-        <p>No entries yet.</p>
-
+        <form action="{{ url_for('journal') }}" method="POST">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="learnt">What did you learn?</label>
+                <textarea id="learnt" name="learnt" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="challenges">What challenges did you face?</label>
+                <textarea id="challenges" name="challenges" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="schedule">What's your schedule for tomorrow?</label>
+                <textarea id="schedule" name="schedule" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Add Entry</button>
+        </form>
+        
+        <div class="search-bar">
+            <input type="text" class="search-input" id="search_date" placeholder="Search by date (YYYY-MM-DD)">
+            <input type="text" class="search-input" id="search_subject" placeholder="Search by subject">
+            <button type="button" class="search-btn" onclick="searchEntries()">Search</button>
+        </div>
+        
+        <div class="entries">
+            {% for entry in entries %}
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-date">{{ entry[2] }}</div>
+                    <div class="entry-actions">
+                        <a href="{{ url_for('edit_entry', idx=loop.index0) }}" class="edit-btn">Edit</a>
+                        <a href="{{ url_for('delete_entry', idx=loop.index0) }}" class="delete-btn" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</a>
+                    </div>
+                </div>
+                <p><strong>Subject:</strong> {{ entry[3] }}</p>
+                <p><strong>Learned:</strong> {{ entry[4] }}</p>
+                <p><strong>Challenges:</strong> {{ entry[5] }}</p>
+                <p><strong>Schedule:</strong> {{ entry[6] }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
+    <script>
+        function searchEntries() {
+            const searchDate = document.getElementById('search_date').value;
+            const searchSubject = document.getElementById('search_subject').value.toLowerCase();
+            window.location.href = `{{ url_for('journal') }}?search_date=${searchDate}&search_subject=${searchSubject}`;
+        }
+    </script>
 </body>
-
 </html>

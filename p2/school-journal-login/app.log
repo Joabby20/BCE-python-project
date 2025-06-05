@@ -1,0 +1,944 @@
+2025-06-05 07:14:16,349 - __main__ - ERROR - Static directory not found
+2025-06-05 07:14:16,372 - __main__ - ERROR - Initialization error: Static directory not found
+2025-06-05 07:17:28,272 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:17:28,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:17:28,279 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:17:30,174 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:17:30,187 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:18:01,621 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:18:01,628 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:18:01,632 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:18:02,899 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:18:02,944 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:18:25,079 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:25] "GET / HTTP/1.1" 200 -
+2025-06-05 07:18:25,247 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:18:25,263 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:18:29,624 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:29] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-06-05 07:18:31,189 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:31] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 07:18:31,347 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:31] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 07:18:31,542 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:31] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 07:18:31,604 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:31] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 07:18:41,004 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:41] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2025-06-05 07:18:41,060 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:41] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 07:18:41,177 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:41] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 07:18:41,392 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:41] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 07:18:41,492 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:18:41] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 07:20:58,806 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\business.py', reloading
+2025-06-05 07:20:59,285 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:21:01,375 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:21:01,389 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:21:09,631 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 07:21:09,813 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:21:11,398 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:21:11,416 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:25:35,072 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:25:35,084 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:25:35,088 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:25:36,478 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:25:36,545 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:25:45,448 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:25:45] "GET / HTTP/1.1" 200 -
+2025-06-05 07:25:47,507 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:25:47] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-06-05 07:25:48,630 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:25:48] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 07:25:48,843 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:25:48] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 07:25:48,927 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:25:48] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 07:28:50,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:28:50,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:28:50,500 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:28:51,819 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:28:51,838 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:28:57,185 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:28:57] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-06-05 07:28:57,603 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:28:57] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 07:28:57,735 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:28:57] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 07:28:58,239 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:28:58] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 07:28:58,417 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:28:58] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 07:30:32,457 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 07:30:32,793 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:30:35,292 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:30:35,307 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:32:07,040 - urls - DEBUG - Rendering login page
+2025-06-05 07:32:07,054 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:07] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:32:10,982 - urls - DEBUG - Rendering register page
+2025-06-05 07:32:11,123 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:11] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:32:29,595 - urls - DEBUG - Registration attempt for username: ps19
+2025-06-05 07:32:29,595 - urls - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com
+2025-06-05 07:32:29,597 - urls - ERROR - Registration error: handle_register() takes 5 positional arguments but 6 were given
+2025-06-05 07:32:29,598 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:29] "POST /register HTTP/1.1" 200 -
+2025-06-05 07:32:34,710 - urls - DEBUG - Rendering login page
+2025-06-05 07:32:34,710 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:34] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:32:46,857 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:32:46,857 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:32:46,861 - database - DEBUG - Getting database connection
+2025-06-05 07:32:46,914 - business - WARNING - Login failed for user: ps19
+2025-06-05 07:32:46,924 - database - DEBUG - Closing database connection
+2025-06-05 07:32:46,936 - urls - DEBUG - handle_login returned: None
+2025-06-05 07:32:46,944 - urls - DEBUG - Login failed for username: ps19
+2025-06-05 07:32:46,974 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:46] "POST /login HTTP/1.1" 200 -
+2025-06-05 07:32:50,409 - urls - DEBUG - Rendering register page
+2025-06-05 07:32:50,413 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:50] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:32:57,635 - urls - DEBUG - Rendering login page
+2025-06-05 07:32:57,651 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:32:57] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:33:08,409 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:33:08,411 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:33:08,411 - database - DEBUG - Getting database connection
+2025-06-05 07:33:08,414 - business - WARNING - Login failed for user: ps19
+2025-06-05 07:33:08,414 - database - DEBUG - Closing database connection
+2025-06-05 07:33:08,415 - urls - DEBUG - handle_login returned: None
+2025-06-05 07:33:08,415 - urls - DEBUG - Login failed for username: ps19
+2025-06-05 07:33:08,417 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:33:08] "POST /login HTTP/1.1" 200 -
+2025-06-05 07:41:00,223 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:41:00,223 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:41:00,223 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:41:01,395 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:41:01,400 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:41:23,237 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:41:23] "GET / HTTP/1.1" 200 -
+2025-06-05 07:41:27,560 - urls - DEBUG - Rendering login page
+2025-06-05 07:41:27,577 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:41:27] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:41:37,296 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:41:37,303 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:41:37,308 - database - DEBUG - Getting database connection
+2025-06-05 07:41:37,324 - business - WARNING - Login failed for user: ps19
+2025-06-05 07:41:37,337 - database - DEBUG - Closing database connection
+2025-06-05 07:41:37,344 - urls - DEBUG - handle_login returned: None
+2025-06-05 07:41:37,356 - urls - DEBUG - Login failed for username: ps19
+2025-06-05 07:41:37,366 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:41:37] "POST /login HTTP/1.1" 200 -
+2025-06-05 07:41:43,637 - urls - DEBUG - Rendering register page
+2025-06-05 07:41:43,708 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:41:43] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:42:23,675 - urls - DEBUG - Registration attempt for username: ps19
+2025-06-05 07:42:23,720 - urls - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com
+2025-06-05 07:42:23,753 - urls - ERROR - Registration error: handle_register() takes 5 positional arguments but 6 were given
+2025-06-05 07:42:23,799 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:42:23] "POST /register HTTP/1.1" 200 -
+2025-06-05 07:42:50,699 - urls - DEBUG - Registration attempt for username: ps19
+2025-06-05 07:42:50,718 - urls - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com
+2025-06-05 07:42:50,727 - urls - ERROR - Registration error: handle_register() takes 5 positional arguments but 6 were given
+2025-06-05 07:42:50,742 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:42:50] "POST /register HTTP/1.1" 200 -
+2025-06-05 07:45:35,690 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:45:35,735 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:45:35,820 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:45:36,990 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:45:37,045 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:45:41,067 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:45:41] "GET / HTTP/1.1" 200 -
+2025-06-05 07:45:45,450 - urls - DEBUG - Rendering register page
+2025-06-05 07:45:45,460 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:45:45] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:46:00,154 - urls - DEBUG - Registration attempt for username: ps19
+2025-06-05 07:46:00,156 - urls - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com, username=ps19
+2025-06-05 07:46:00,159 - urls - ERROR - Registration error: handle_register() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 97, in register
+    success = handle_register(first_name, last_name, username, email, password, confirm_password)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_register() takes 5 positional arguments but 6 were given
+2025-06-05 07:46:00,167 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:46:00] "POST /register HTTP/1.1" 200 -
+2025-06-05 07:48:10,426 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:48:10,426 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:48:10,430 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:48:11,448 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:48:11,453 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:48:17,104 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:17] "GET / HTTP/1.1" 200 -
+2025-06-05 07:48:20,015 - urls - DEBUG - Rendering register page
+2025-06-05 07:48:20,037 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:20] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:48:33,985 - urls - DEBUG - Registration attempt for username: ps19
+2025-06-05 07:48:34,002 - urls - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com, username=ps19
+2025-06-05 07:48:34,011 - business - DEBUG - Starting registration for user: ps19
+2025-06-05 07:48:34,022 - business - DEBUG - Form data: first_name=prince, last_name=sai, email=princenii192004@gmail.com, username=ps19
+2025-06-05 07:48:34,034 - database - DEBUG - Getting database connection
+2025-06-05 07:48:34,034 - business - DEBUG - Database connection established
+2025-06-05 07:48:34,067 - business - DEBUG - Validating password length
+2025-06-05 07:48:34,091 - business - DEBUG - Validating username format
+2025-06-05 07:48:34,106 - business - DEBUG - Checking for existing username/email
+2025-06-05 07:48:34,133 - business - DEBUG - Creating new user record
+2025-06-05 07:48:34,711 - database - DEBUG - Closing database connection
+2025-06-05 07:48:34,713 - business - INFO - User registered successfully: ps19
+2025-06-05 07:48:34,714 - business - DEBUG - Registration process complete
+2025-06-05 07:48:34,715 - urls - DEBUG - handle_register returned: True
+2025-06-05 07:48:34,715 - urls - DEBUG - Registration successful for user: ps19
+2025-06-05 07:48:34,716 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:34] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-06-05 07:48:34,729 - urls - DEBUG - Rendering login page
+2025-06-05 07:48:34,736 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:34] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:48:42,581 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:48:42,581 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:48:42,581 - database - DEBUG - Getting database connection
+2025-06-05 07:48:43,024 - business - INFO - Login successful for user: ps19
+2025-06-05 07:48:43,026 - database - DEBUG - Closing database connection
+2025-06-05 07:48:43,026 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x0000015734B25810>
+2025-06-05 07:48:43,026 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 07:48:43,026 - urls - DEBUG - Session contents after login: {'_flashes': [('success', 'Registration successful! You can now start adding journal entries.')], '_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 07:48:43,026 - urls - DEBUG - Redirecting to journal page
+2025-06-05 07:48:43,026 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,044 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,047 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,062 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,064 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,085 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,087 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,102 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,110 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,127 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,129 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,143 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,146 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,160 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,161 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,177 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,179 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,197 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,199 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,212 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,213 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,226 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,226 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,247 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,249 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,268 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,269 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,283 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,286 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,299 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,304 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,337 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,346 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,397 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,405 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,463 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:43,481 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:43,551 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:43,560 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:43] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,687 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:44,698 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,712 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:44,716 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,733 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:44,735 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,753 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:44,755 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,770 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:44,772 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,789 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:44,799 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,821 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:44,845 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,898 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:44,911 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:44,968 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:44,986 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:44] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,052 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,068 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,124 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:45,136 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,185 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,198 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,258 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:45,275 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,346 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,355 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,414 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:45,423 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,471 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,477 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,494 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:45,497 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,513 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,517 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,534 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:45,538 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:45,548 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:45,552 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:48,898 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:48,904 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:48,951 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:48,963 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,038 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,058 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,121 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,128 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,169 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,179 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,212 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,217 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,255 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,263 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,286 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,292 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,320 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,331 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,381 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,388 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,423 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,432 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,489 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,502 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,597 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,603 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,665 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,683 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,753 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,764 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,797 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,804 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,854 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,868 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,908 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,913 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,934 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:49,938 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:49,955 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:49,963 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,082 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,094 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,130 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,150 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,224 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,236 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,322 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,347 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,400 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,413 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,458 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,477 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,518 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,528 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,564 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,568 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,609 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,619 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,670 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,686 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,769 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,784 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,863 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:55,877 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:55,952 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:55,963 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,013 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:56,020 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,069 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:56,081 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,102 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:56,108 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,125 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:56,131 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,147 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:56,149 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,168 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:48:56,173 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:48:56,187 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:48:56,190 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:48:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,291 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:26,297 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,326 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:26,330 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,364 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:26,374 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,433 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:26,450 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,674 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:26,714 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:26,899 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:26,939 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:26] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,097 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,115 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,200 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,207 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,339 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,372 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,532 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,553 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,663 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,672 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,710 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,715 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,732 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,746 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,781 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,790 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,819 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,831 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,862 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,875 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,914 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:49:27,923 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,942 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:49:27,945 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:49:27,975 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:49:27,979 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:27] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 07:49:42,291 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:49:42,302 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:49:42] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 07:50:22,372 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:50:22,382 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:22] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 07:50:42,241 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:50:42,244 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:50:42,250 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:50:43,347 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:50:43,366 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:50:47,248 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:47] "GET / HTTP/1.1" 200 -
+2025-06-05 07:50:47,559 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:50:47,739 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:50:49,353 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:49,355 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,415 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:49,432 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,522 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:49,530 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,552 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:49,588 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,838 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:49,885 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,953 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:49,959 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:49,985 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:49,991 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,012 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,016 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,057 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,135 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,359 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,365 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,387 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,393 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,438 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,443 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,469 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,472 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,504 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,509 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,656 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,662 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,684 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,687 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,722 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,728 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,756 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,764 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,782 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:50,785 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:50,831 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:50,836 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:51,974 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:51,981 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:51] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:51,993 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:51,999 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:51] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,030 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,034 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,062 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,068 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,106 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,117 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,164 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,179 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,250 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,269 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,326 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,348 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,406 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,415 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,469 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,486 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,560 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,589 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,651 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,673 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,746 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,760 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,818 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,830 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,869 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,877 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,914 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:52,921 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,960 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:52,970 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:52] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:52,999 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:53,008 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:53] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:53,033 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:53,039 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:53] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:53,083 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:53,094 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:53] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,150 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,162 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,180 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,184 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,202 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,212 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,233 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,236 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,251 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,263 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,278 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,282 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,298 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,298 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,320 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,330 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,351 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,351 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,369 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,379 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,396 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,402 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,429 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,436 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,484 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,508 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,588 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,615 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,691 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,704 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,766 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,783 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,833 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,838 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,882 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:58,898 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:50:58,938 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:50:58,954 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:50:59,127 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:50:59,165 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:50:59] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:17,506 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:17] "GET / HTTP/1.1" 200 -
+2025-06-05 07:52:17,880 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:52:18,201 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:52:19,755 - urls - DEBUG - Rendering register page
+2025-06-05 07:52:19,768 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:19] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:52:23,387 - urls - DEBUG - Rendering login page
+2025-06-05 07:52:23,410 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:23] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:52:24,985 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:52:24,987 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:52:24,990 - database - DEBUG - Getting database connection
+2025-06-05 07:52:25,269 - business - INFO - Login successful for user: ps19
+2025-06-05 07:52:25,270 - database - DEBUG - Closing database connection
+2025-06-05 07:52:25,270 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x00000148229A47C0>
+2025-06-05 07:52:25,270 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 07:52:25,270 - urls - DEBUG - Session contents after login: {'_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 07:52:25,270 - urls - DEBUG - Redirecting to journal page
+2025-06-05 07:52:25,270 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,285 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,292 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,305 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,306 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,318 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,321 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,334 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,335 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,349 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,349 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,363 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,367 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,377 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,382 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,394 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,397 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,416 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,418 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,437 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,440 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,490 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,502 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,577 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,592 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,657 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,668 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,713 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,721 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,765 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,768 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,808 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,824 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,878 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:25,889 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:25,967 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:25,981 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:25] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:26,039 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:26,051 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:26] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,169 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,171 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,187 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,189 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,242 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,255 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,309 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,321 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,387 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,398 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,453 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,455 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,469 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,472 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,489 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,491 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,505 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,508 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,523 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,525 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,538 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,540 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,554 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,557 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,571 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,571 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,588 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,590 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,603 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,606 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,618 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,620 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,634 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,634 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,652 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:52:27,654 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,670 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:52:27,672 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:52:27,685 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:52:27,686 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:52:27] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 07:55:38,347 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 07:55:38,347 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 07:55:38,354 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 07:55:39,433 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 07:55:39,440 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 07:55:44,890 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:44] "GET / HTTP/1.1" 200 -
+2025-06-05 07:55:44,982 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:55:45,076 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:55:47,473 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:47,477 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:47,494 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:47,543 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:47] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:47,658 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:47,663 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:47,677 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:47,681 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:47] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:47,748 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:47,793 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,024 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,128 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,317 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,332 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,368 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,374 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,391 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,394 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,408 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,408 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,426 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,426 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,448 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,450 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,464 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,466 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,482 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,484 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,497 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,499 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,513 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,515 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,531 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,532 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,552 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,559 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,579 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:48,584 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:48,598 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:48,600 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:48] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,714 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,717 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,728 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,740 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,760 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,765 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,780 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,789 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,806 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,810 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,826 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,834 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,849 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,859 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,880 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,882 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,907 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,911 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,942 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,945 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,963 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:49,967 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:49,984 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:49,995 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,033 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:50,045 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,092 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:50,108 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,165 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:50,177 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,229 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:50,243 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,297 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:50,312 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,378 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:50,396 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,455 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:50,469 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:50,560 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:50,576 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,667 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:55,675 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,696 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:55,713 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,740 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:55,747 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,791 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:55,798 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,831 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:55,841 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,866 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:55,875 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,897 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:55,907 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,927 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:55,930 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,945 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:55,949 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:55,965 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:55,974 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:55] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,012 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:56,031 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,082 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:56,098 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,164 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:56,187 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,252 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:56,266 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,326 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:56,338 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,389 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:56,402 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,461 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:56,475 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,495 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:56,498 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,515 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:55:56,520 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:55:56,544 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:55:56,548 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:55:56] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:23,377 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:23] "GET / HTTP/1.1" 200 -
+2025-06-05 07:58:23,684 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:58:23,803 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:58:25,261 - urls - DEBUG - Rendering register page
+2025-06-05 07:58:25,277 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:25] "GET /register HTTP/1.1" 200 -
+2025-06-05 07:58:28,116 - urls - DEBUG - Rendering login page
+2025-06-05 07:58:28,142 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:28] "GET /login HTTP/1.1" 200 -
+2025-06-05 07:58:30,025 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 07:58:30,025 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 07:58:30,027 - database - DEBUG - Getting database connection
+2025-06-05 07:58:30,316 - business - INFO - Login successful for user: ps19
+2025-06-05 07:58:30,318 - database - DEBUG - Closing database connection
+2025-06-05 07:58:30,318 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x000001B3991C8D60>
+2025-06-05 07:58:30,318 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 07:58:30,320 - urls - DEBUG - Session contents after login: {'_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 07:58:30,320 - urls - DEBUG - Redirecting to journal page
+2025-06-05 07:58:30,322 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,337 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,342 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,357 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,358 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,374 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,378 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,397 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,402 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,427 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,438 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,472 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,475 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,509 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,517 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,562 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,570 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,626 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,633 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,678 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,685 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,733 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,741 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,772 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,780 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,815 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,819 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,856 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:30,861 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:30,928 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:30,942 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:30] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:31,012 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:31,025 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:31] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:31,085 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:31,097 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:31] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:31,145 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:31,149 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:31] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:31,168 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:31,170 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:31] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,293 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,301 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,315 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,336 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,362 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,374 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,396 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,405 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,444 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,451 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,486 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,489 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,512 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,519 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,537 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,539 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,560 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,563 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,578 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,586 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,600 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,604 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,619 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,621 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,649 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,656 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,696 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,703 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,727 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,733 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,768 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,783 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,807 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,811 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,829 - urls - DEBUG - User already logged in: ps19
+2025-06-05 07:58:32,837 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,853 - urls - ERROR - Journal page error: name 'close_db' is not defined
+2025-06-05 07:58:32,856 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 07:58:32,871 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:58:32,873 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:58:32] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 07:59:05,335 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:59:05] "GET / HTTP/1.1" 200 -
+2025-06-05 07:59:05,521 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 07:59:05,713 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:59:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 07:59:07,292 - flask-limiter - INFO - ratelimit 50 per 1 hour (127.0.0.1) exceeded at endpoint: main.login
+2025-06-05 07:59:07,297 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 07:59:07] "[31m[1mGET /login HTTP/1.1[0m" 429 -
+2025-06-05 08:31:52,098 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 08:31:52,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 08:31:52,125 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:31:53,839 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 08:31:53,852 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 08:31:58,118 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:31:58] "GET / HTTP/1.1" 200 -
+2025-06-05 08:31:58,274 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 08:31:58,425 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:31:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 08:32:05,176 - urls - DEBUG - Rendering login page
+2025-06-05 08:32:05,184 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:32:05] "GET /login HTTP/1.1" 200 -
+2025-06-05 08:32:08,051 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 08:32:08,066 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 08:32:08,075 - database - DEBUG - Getting database connection
+2025-06-05 08:32:09,418 - business - INFO - Login successful for user: ps19
+2025-06-05 08:32:09,428 - database - DEBUG - Closing database connection
+2025-06-05 08:32:09,437 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x00000290D1EC8A60>
+2025-06-05 08:32:09,448 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 08:32:09,461 - urls - DEBUG - Session contents after login: {'_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 08:32:09,470 - urls - DEBUG - Redirecting to journal page
+2025-06-05 08:32:09,515 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:32:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 08:32:09,575 - urls - ERROR - Journal page error: cannot access local variable 'conn' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 135, in journal
+    conn = get_db()
+           ^^^^^^
+NameError: name 'get_db' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 150, in journal
+    except sqlite3.Error as e:
+           ^^^^^^^
+NameError: name 'sqlite3' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 155, in journal
+    close_db(conn)
+             ^^^^
+UnboundLocalError: cannot access local variable 'conn' where it is not associated with a value
+2025-06-05 08:32:09,625 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:32:09] "[35m[1mGET /journal HTTP/1.1[0m" 500 -
+2025-06-05 08:32:45,763 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:32:45] "GET / HTTP/1.1" 200 -
+2025-06-05 08:38:26,040 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 08:38:26,040 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 08:38:26,047 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:38:27,914 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 08:38:28,015 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 08:38:33,204 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:33] "GET / HTTP/1.1" 200 -
+2025-06-05 08:38:33,329 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 08:38:33,351 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 08:38:34,804 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:38:34,807 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:34] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 08:38:34,933 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:34] "[35m[1mGET /journal HTTP/1.1[0m" 500 -
+2025-06-05 08:38:36,189 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:36] "GET /journal?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 08:38:36,337 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:36] "GET /journal?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 08:38:36,655 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:36] "GET /journal?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 08:38:36,837 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:38:36] "[36mGET /journal?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 08:48:33,645 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 08:48:33,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 08:48:33,662 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:48:35,204 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 08:48:35,220 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 08:48:38,868 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:48:38] "GET / HTTP/1.1" 200 -
+2025-06-05 08:48:41,593 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:48:41,594 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:48:41] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 08:48:41,614 - database - DEBUG - Getting database connection
+2025-06-05 08:48:41,633 - urls - DEBUG - No journal entries found for user 1
+2025-06-05 08:48:41,704 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:48:41] "GET /journal HTTP/1.1" 200 -
+2025-06-05 08:51:05,102 - database - DEBUG - Closing database connection
+2025-06-05 08:51:05,107 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:51:05] "[32mPOST /journal HTTP/1.1[0m" 302 -
+2025-06-05 08:51:05,123 - database - DEBUG - Getting database connection
+2025-06-05 08:51:05,130 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 08:51:05,142 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:51:05] "GET /journal HTTP/1.1" 200 -
+2025-06-05 08:52:25,404 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 08:52:25,404 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 08:52:25,411 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:52:26,852 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 08:52:26,908 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 08:52:31,754 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:31] "GET / HTTP/1.1" 200 -
+2025-06-05 08:52:31,947 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 08:52:32,012 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 08:52:34,645 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:52:34,649 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:34] "[32mGET /register HTTP/1.1[0m" 302 -
+2025-06-05 08:52:34,805 - database - DEBUG - Getting database connection
+2025-06-05 08:52:34,873 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 08:52:34,984 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:34] "GET /journal HTTP/1.1" 200 -
+2025-06-05 08:52:43,628 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:52:43,654 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:43] "[32mGET /register HTTP/1.1[0m" 302 -
+2025-06-05 08:52:43,724 - database - DEBUG - Getting database connection
+2025-06-05 08:52:43,748 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 08:52:43,787 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:52:43] "GET /journal HTTP/1.1" 200 -
+2025-06-05 08:53:58,878 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\app.py', reloading
+2025-06-05 08:53:59,597 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:58:56,772 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 08:58:56,774 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 08:58:56,778 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 08:58:58,369 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 08:58:58,383 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 08:59:02,373 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:02] "GET / HTTP/1.1" 200 -
+2025-06-05 08:59:02,521 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 08:59:02,648 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 08:59:04,876 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:59:04,881 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:04] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 08:59:04,902 - database - DEBUG - Getting database connection
+2025-06-05 08:59:04,905 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 08:59:04,939 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:04] "GET /journal HTTP/1.1" 200 -
+2025-06-05 08:59:13,397 - urls - DEBUG - User already logged in: ps19
+2025-06-05 08:59:13,435 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:13] "[32mGET /register HTTP/1.1[0m" 302 -
+2025-06-05 08:59:13,529 - database - DEBUG - Getting database connection
+2025-06-05 08:59:13,549 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 08:59:13,570 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:13] "GET /journal HTTP/1.1" 200 -

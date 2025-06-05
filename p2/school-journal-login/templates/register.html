@@ -99,12 +99,149 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form method="post">
-            <input name="username" placeholder="Username" required>
-            <input name="password" type="password" placeholder="Password" required>
-            <button type="submit">Register</button>
+        <form action="{{ url_for('main.register') }}" method="POST" id="registerForm">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required>
+                <small class="form-help">Please enter your first name</small>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <small class="form-help">Please enter your last name</small>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <small class="form-help">Username must be 4-20 characters long and can include letters, numbers, and underscores</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <small class="form-help">Please enter a valid email address</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <small class="form-help">Password must be at least 8 characters long and include:</small>
+                <ul class="password-requirements">
+                    <li>At least one uppercase letter</li>
+                    <li>At least one lowercase letter</li>
+                    <li>At least one number</li>
+                    <li>At least one special character (!@#$%^&*)</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <small class="form-help">Please re-enter your password</small>
+                <span id="passwordMatch" class="password-match-status"></span>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
         </form>
-        <p>Already have an account? <a href="../public/index.html">Login</a></p>
+        <style>
+            .form-help {
+                font-size: 0.85rem;
+                color: #666;
+                margin-top: 0.25rem;
+            }
+            .password-requirements {
+                margin-top: 0.25rem;
+                padding-left: 1.5rem;
+                font-size: 0.85rem;
+                color: #666;
+            }
+            .password-requirements li {
+                margin-bottom: 0.25rem;
+            }
+            .password-match-status {
+                display: block;
+                margin-top: 0.25rem;
+                font-size: 0.85rem;
+            }
+        </style>
+        <script>
+            // Client-side validation for password requirements
+            const passwordInput = document.getElementById('password');
+            passwordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                const requirements = document.querySelectorAll('.password-requirements li');
+                
+                requirements[0].style.color = /(?=.*[A-Z])/.test(password) ? '#4CAF50' : '#f44336';
+                requirements[1].style.color = /(?=.*[a-z])/.test(password) ? '#4CAF50' : '#f44336';
+                requirements[2].style.color = /(?=.*\d)/.test(password) ? '#4CAF50' : '#f44336';
+                requirements[3].style.color = /(?=.*[!@#$%^&*])/.test(password) ? '#4CAF50' : '#f44336';
+            });
+
+            // Password confirmation validation
+            const confirmPasswordInput = document.getElementById('confirm_password');
+            const passwordMatchStatus = document.getElementById('passwordMatch');
+            
+            function checkPasswordMatch() {
+                if (passwordInput.value === confirmPasswordInput.value) {
+                    passwordMatchStatus.textContent = 'Passwords match!';
+                    passwordMatchStatus.style.color = '#4CAF50';
+                } else {
+                    passwordMatchStatus.textContent = 'Passwords do not match!';
+                    passwordMatchStatus.style.color = '#f44336';
+                }
+            }
+            
+            confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+            passwordInput.addEventListener('input', checkPasswordMatch);
+            
+            // Handle form submission
+            const form = document.getElementById('registerForm');
+            form.addEventListener('submit', function(e) {
+                // Reset any previous error messages
+                const errorElements = document.querySelectorAll('.error');
+                errorElements.forEach(el => el.remove());
+                
+                // Check if passwords match
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    e.preventDefault();
+                    passwordMatchStatus.textContent = 'Please make sure passwords match!';
+                    passwordMatchStatus.style.color = '#f44336';
+                    return;
+                }
+            });
+        </script>
+        <style>
+            .password-match-status {
+                display: block;
+                margin-top: 0.25rem;
+                font-size: 0.85rem;
+            }
+            .flash-message {
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 4px;
+                text-align: center;
+            }
+            .flash-message.success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            .flash-message.error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+        </style>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+        <p>Already have an account? <a href="{{ url_for('main.login') }}">Login</a></p>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-message {{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     </div>
 </body>
 
