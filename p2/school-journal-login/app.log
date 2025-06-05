@@ -1384,3 +1384,217 @@ sqlite3.OperationalError: no such table: courses
 2025-06-05 10:26:15,363 - database - DEBUG - Getting database connection
 2025-06-05 10:26:15,383 - database - DEBUG - Closing database connection
 2025-06-05 10:26:15,402 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:26:15] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:28:15,354 - urls - DEBUG - User logged out successfully
+2025-06-05 10:28:15,356 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:28:15] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-05 10:28:15,427 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:28:15] "GET / HTTP/1.1" 200 -
+2025-06-05 10:28:18,029 - urls - DEBUG - Rendering register page
+2025-06-05 10:28:18,097 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:28:18] "GET /register HTTP/1.1" 200 -
+2025-06-05 10:29:10,627 - urls - DEBUG - Registration attempt for username: jfoli
+2025-06-05 10:29:10,627 - urls - DEBUG - Form data: first_name=joseph, last_name=foli, email=jfoli@gmail.com, username=jfoli
+2025-06-05 10:29:10,631 - business - DEBUG - Starting registration for user: jfoli
+2025-06-05 10:29:10,631 - business - DEBUG - Form data: first_name=joseph, last_name=foli, email=jfoli@gmail.com, username=jfoli
+2025-06-05 10:29:10,631 - database - DEBUG - Getting database connection
+2025-06-05 10:29:10,636 - business - DEBUG - Database connection established
+2025-06-05 10:29:10,640 - business - DEBUG - Validating password length
+2025-06-05 10:29:10,640 - business - DEBUG - Validating username format
+2025-06-05 10:29:10,640 - business - DEBUG - Checking for existing username/email
+2025-06-05 10:29:10,648 - business - DEBUG - Creating new user record
+2025-06-05 10:29:11,017 - database - DEBUG - Closing database connection
+2025-06-05 10:29:11,019 - business - INFO - User registered successfully: jfoli
+2025-06-05 10:29:11,020 - business - DEBUG - Registration process complete
+2025-06-05 10:29:11,022 - urls - DEBUG - handle_register returned: True
+2025-06-05 10:29:11,024 - urls - DEBUG - Registration successful for user: jfoli
+2025-06-05 10:29:11,029 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:11] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-06-05 10:29:11,045 - urls - DEBUG - Rendering login page
+2025-06-05 10:29:11,126 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:11] "GET /login HTTP/1.1" 200 -
+2025-06-05 10:29:17,292 - urls - DEBUG - Login attempt for username: jfoli
+2025-06-05 10:29:17,294 - business - DEBUG - Attempting login for user: jfoli
+2025-06-05 10:29:17,303 - database - DEBUG - Getting database connection
+2025-06-05 10:29:17,731 - business - INFO - Login successful for user: jfoli
+2025-06-05 10:29:17,736 - database - DEBUG - Closing database connection
+2025-06-05 10:29:17,742 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x0000013D22643A00>
+2025-06-05 10:29:17,749 - urls - DEBUG - Login successful for user: jfoli
+2025-06-05 10:29:17,756 - urls - DEBUG - Session contents after login: {'_flashes': [('success', 'Registration successful! You can now start adding journal entries.')], '_permanent': True, 'user': 'jfoli', 'user_id': 2}
+2025-06-05 10:29:17,759 - urls - DEBUG - Redirecting to dashboard page
+2025-06-05 10:29:17,772 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 10:29:17,792 - database - DEBUG - Getting database connection
+2025-06-05 10:29:17,796 - database - DEBUG - Closing database connection
+2025-06-05 10:29:17,805 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:17] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:29:32,439 - database - DEBUG - Getting database connection
+2025-06-05 10:29:32,453 - database - DEBUG - Closing database connection
+2025-06-05 10:29:32,466 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:32] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:29:33,527 - database - DEBUG - Getting database connection
+2025-06-05 10:29:33,536 - database - DEBUG - Closing database connection
+2025-06-05 10:29:33,544 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:33] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:29:34,846 - database - DEBUG - Getting database connection
+2025-06-05 10:29:34,861 - database - DEBUG - Closing database connection
+2025-06-05 10:29:34,885 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:34] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:29:35,711 - database - DEBUG - Getting database connection
+2025-06-05 10:29:35,714 - database - DEBUG - Closing database connection
+2025-06-05 10:29:35,720 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:35] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:29:38,373 - database - DEBUG - Getting database connection
+2025-06-05 10:29:38,381 - urls - DEBUG - No journal entries found for user 2
+2025-06-05 10:29:38,385 - database - DEBUG - Getting database connection
+2025-06-05 10:29:38,396 - database - DEBUG - Closing database connection
+2025-06-05 10:29:38,401 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:38] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:29:42,068 - urls - DEBUG - User logged out successfully
+2025-06-05 10:29:42,070 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-05 10:29:42,091 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:42] "GET / HTTP/1.1" 200 -
+2025-06-05 10:29:43,759 - urls - DEBUG - Rendering login page
+2025-06-05 10:29:43,769 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:43] "GET /login HTTP/1.1" 200 -
+2025-06-05 10:29:47,823 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 10:29:47,825 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 10:29:47,829 - database - DEBUG - Getting database connection
+2025-06-05 10:29:48,119 - business - INFO - Login successful for user: ps19
+2025-06-05 10:29:48,120 - database - DEBUG - Closing database connection
+2025-06-05 10:29:48,120 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x0000013D22642BF0>
+2025-06-05 10:29:48,120 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 10:29:48,121 - urls - DEBUG - Session contents after login: {'_flashes': [('info', 'You have been logged out')], '_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 10:29:48,121 - urls - DEBUG - Redirecting to dashboard page
+2025-06-05 10:29:48,122 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 10:29:48,136 - database - DEBUG - Getting database connection
+2025-06-05 10:29:48,136 - database - DEBUG - Closing database connection
+2025-06-05 10:29:48,138 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:29:48] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:30:15,289 - database - DEBUG - Getting database connection
+2025-06-05 10:30:15,301 - database - DEBUG - Closing database connection
+2025-06-05 10:30:15,321 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:15] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:30:22,136 - database - DEBUG - Getting database connection
+2025-06-05 10:30:22,148 - database - DEBUG - Closing database connection
+2025-06-05 10:30:22,168 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:22] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:30:25,236 - database - DEBUG - Getting database connection
+2025-06-05 10:30:25,238 - database - DEBUG - Closing database connection
+2025-06-05 10:30:25,242 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:25] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:30:38,226 - database - DEBUG - Getting database connection
+2025-06-05 10:30:38,243 - database - DEBUG - Closing database connection
+2025-06-05 10:30:38,255 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:38] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:30:42,114 - database - DEBUG - Getting database connection
+2025-06-05 10:30:42,117 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:30:42,119 - database - DEBUG - Getting database connection
+2025-06-05 10:30:42,125 - database - DEBUG - Closing database connection
+2025-06-05 10:30:42,135 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:42] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:30:46,492 - database - DEBUG - Getting database connection
+2025-06-05 10:30:46,494 - database - DEBUG - Closing database connection
+2025-06-05 10:30:46,497 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:46] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:30:50,032 - database - DEBUG - Getting database connection
+2025-06-05 10:30:50,033 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:30:50,034 - database - DEBUG - Getting database connection
+2025-06-05 10:30:50,036 - database - DEBUG - Closing database connection
+2025-06-05 10:30:50,047 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:30:50] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:31:54,195 - database - DEBUG - Closing database connection
+2025-06-05 10:31:54,208 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:31:54] "[32mPOST /journal HTTP/1.1[0m" 302 -
+2025-06-05 10:31:54,260 - database - DEBUG - Getting database connection
+2025-06-05 10:31:54,272 - urls - DEBUG - Fetched 2 journal entries for user 1
+2025-06-05 10:31:54,272 - database - DEBUG - Getting database connection
+2025-06-05 10:31:54,274 - database - DEBUG - Closing database connection
+2025-06-05 10:31:54,276 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:31:54] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:32:07,512 - database - DEBUG - Getting database connection
+2025-06-05 10:32:07,515 - database - DEBUG - Closing database connection
+2025-06-05 10:32:07,515 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:32:07] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:32:10,363 - database - DEBUG - Getting database connection
+2025-06-05 10:32:10,370 - urls - DEBUG - Fetched 2 journal entries for user 1
+2025-06-05 10:32:10,406 - database - DEBUG - Getting database connection
+2025-06-05 10:32:10,435 - database - DEBUG - Closing database connection
+2025-06-05 10:32:10,472 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:32:10] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:32:32,249 - database - DEBUG - Getting database connection
+2025-06-05 10:32:32,261 - urls - DEBUG - Fetched 2 journal entries for user 1
+2025-06-05 10:32:32,266 - database - DEBUG - Getting database connection
+2025-06-05 10:32:32,285 - database - DEBUG - Closing database connection
+2025-06-05 10:32:32,298 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:32:32] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:32:35,130 - database - DEBUG - Getting database connection
+2025-06-05 10:32:35,130 - database - DEBUG - Closing database connection
+2025-06-05 10:32:35,136 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:32:35] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:32:38,257 - database - DEBUG - Getting database connection
+2025-06-05 10:32:38,267 - database - DEBUG - Closing database connection
+2025-06-05 10:32:38,280 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:32:38] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:21:55,056 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 11:21:55,059 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 11:21:55,062 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 11:21:56,620 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 11:21:56,630 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 11:22:48,648 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:22:48] "GET / HTTP/1.1" 200 -
+2025-06-05 11:22:55,851 - urls - DEBUG - Rendering register page
+2025-06-05 11:22:55,873 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:22:55] "GET /register HTTP/1.1" 200 -
+2025-06-05 11:24:29,222 - urls - DEBUG - Registration attempt for username: davie504
+2025-06-05 11:24:29,252 - urls - DEBUG - Form data: first_name=David, last_name=Nkani, email=davie504@gmail.com, username=davie504
+2025-06-05 11:24:29,287 - business - DEBUG - Starting registration for user: davie504
+2025-06-05 11:24:29,307 - business - DEBUG - Form data: first_name=David, last_name=Nkani, email=davie504@gmail.com, username=davie504
+2025-06-05 11:24:29,343 - database - DEBUG - Getting database connection
+2025-06-05 11:24:29,385 - business - DEBUG - Database connection established
+2025-06-05 11:24:29,437 - business - DEBUG - Validating password length
+2025-06-05 11:24:29,475 - business - DEBUG - Validating username format
+2025-06-05 11:24:29,518 - business - DEBUG - Checking for existing username/email
+2025-06-05 11:24:29,554 - business - DEBUG - Creating new user record
+2025-06-05 11:24:30,536 - database - DEBUG - Closing database connection
+2025-06-05 11:24:30,541 - business - INFO - User registered successfully: davie504
+2025-06-05 11:24:30,543 - business - DEBUG - Registration process complete
+2025-06-05 11:24:30,545 - urls - DEBUG - handle_register returned: True
+2025-06-05 11:24:30,552 - urls - DEBUG - Registration successful for user: davie504
+2025-06-05 11:24:30,556 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:24:30] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-06-05 11:24:30,592 - urls - DEBUG - Rendering login page
+2025-06-05 11:24:30,626 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:24:30] "GET /login HTTP/1.1" 200 -
+2025-06-05 11:25:01,006 - urls - DEBUG - Login attempt for username: davie504
+2025-06-05 11:25:01,027 - business - DEBUG - Attempting login for user: davie504
+2025-06-05 11:25:01,058 - database - DEBUG - Getting database connection
+2025-06-05 11:25:02,059 - business - INFO - Login successful for user: davie504
+2025-06-05 11:25:02,060 - database - DEBUG - Closing database connection
+2025-06-05 11:25:02,060 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x00000295C30FD000>
+2025-06-05 11:25:02,060 - urls - DEBUG - Login successful for user: davie504
+2025-06-05 11:25:02,065 - urls - DEBUG - Session contents after login: {'_flashes': [('success', 'Registration successful! You can now start adding journal entries.')], '_permanent': True, 'user': 'davie504', 'user_id': 3}
+2025-06-05 11:25:02,065 - urls - DEBUG - Redirecting to dashboard page
+2025-06-05 11:25:02,068 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 11:25:02,100 - database - DEBUG - Getting database connection
+2025-06-05 11:25:02,106 - database - DEBUG - Closing database connection
+2025-06-05 11:25:02,175 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:02] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:25:08,717 - database - DEBUG - Getting database connection
+2025-06-05 11:25:08,733 - database - DEBUG - Closing database connection
+2025-06-05 11:25:08,745 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:08] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:25:12,497 - database - DEBUG - Getting database connection
+2025-06-05 11:25:12,499 - database - DEBUG - Closing database connection
+2025-06-05 11:25:12,518 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:12] "GET /courses HTTP/1.1" 200 -
+2025-06-05 11:25:23,127 - database - DEBUG - Getting database connection
+2025-06-05 11:25:23,156 - urls - DEBUG - No journal entries found for user 3
+2025-06-05 11:25:23,199 - database - DEBUG - Getting database connection
+2025-06-05 11:25:23,254 - database - DEBUG - Closing database connection
+2025-06-05 11:25:23,517 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:23] "GET /journal HTTP/1.1" 200 -
+2025-06-05 11:25:28,263 - database - DEBUG - Getting database connection
+2025-06-05 11:25:28,279 - database - DEBUG - Closing database connection
+2025-06-05 11:25:28,360 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:28] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:25:35,213 - database - DEBUG - Getting database connection
+2025-06-05 11:25:35,237 - database - DEBUG - Closing database connection
+2025-06-05 11:25:35,285 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:35] "GET /courses HTTP/1.1" 200 -
+2025-06-05 11:25:57,934 - database - DEBUG - Getting database connection
+2025-06-05 11:25:57,972 - database - DEBUG - Closing database connection
+2025-06-05 11:25:57,983 - database - DEBUG - Getting database connection
+2025-06-05 11:25:58,075 - database - DEBUG - Closing database connection
+2025-06-05 11:25:58,115 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:25:58] "POST /courses HTTP/1.1" 200 -
+2025-06-05 11:26:19,399 - database - DEBUG - Getting database connection
+2025-06-05 11:26:19,403 - urls - DEBUG - No journal entries found for user 3
+2025-06-05 11:26:19,403 - database - DEBUG - Getting database connection
+2025-06-05 11:26:19,403 - database - DEBUG - Closing database connection
+2025-06-05 11:26:19,410 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:26:19] "GET /journal HTTP/1.1" 200 -
+2025-06-05 11:26:19,957 - database - DEBUG - Getting database connection
+2025-06-05 11:26:19,989 - urls - DEBUG - No journal entries found for user 3
+2025-06-05 11:26:20,038 - database - DEBUG - Getting database connection
+2025-06-05 11:26:20,089 - database - DEBUG - Closing database connection
+2025-06-05 11:26:20,176 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:26:20] "GET /journal HTTP/1.1" 200 -
+2025-06-05 11:28:18,028 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 11:28:18,243 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:28:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-06-05 11:29:41,521 - database - DEBUG - Closing database connection
+2025-06-05 11:29:41,530 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:41] "[32mPOST /journal HTTP/1.1[0m" 302 -
+2025-06-05 11:29:41,587 - database - DEBUG - Getting database connection
+2025-06-05 11:29:41,629 - urls - DEBUG - Fetched 1 journal entries for user 3
+2025-06-05 11:29:41,645 - database - DEBUG - Getting database connection
+2025-06-05 11:29:41,671 - database - DEBUG - Closing database connection
+2025-06-05 11:29:41,696 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:41] "GET /journal HTTP/1.1" 200 -
+2025-06-05 11:29:48,625 - database - DEBUG - Getting database connection
+2025-06-05 11:29:48,648 - database - DEBUG - Closing database connection
+2025-06-05 11:29:48,659 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:48] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 11:29:51,039 - database - DEBUG - Getting database connection
+2025-06-05 11:29:51,065 - database - DEBUG - Closing database connection
+2025-06-05 11:29:51,097 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:51] "GET /courses HTTP/1.1" 200 -
+2025-06-05 11:29:54,546 - database - DEBUG - Getting database connection
+2025-06-05 11:29:54,548 - urls - DEBUG - Fetched 1 journal entries for user 3
+2025-06-05 11:29:54,550 - database - DEBUG - Getting database connection
+2025-06-05 11:29:54,550 - database - DEBUG - Closing database connection
+2025-06-05 11:29:54,568 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 11:29:54] "GET /journal HTTP/1.1" 200 -
