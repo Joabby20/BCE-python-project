@@ -26,6 +26,124 @@ main = Blueprint('main', __name__)
 def home():
     return render_template('home.html')
 
+@main.route('/dashboard')
+def dashboard():
+    try:
+        if 'user' not in session:
+            flash('Please log in first', 'error')
+            return redirect(url_for('main.login'))
+        
+        try:
+            courses = get_courses(session['user_id'])
+            logger.debug(f"Fetched {len(courses)} courses for user {session['user_id']}")
+            
+            return render_template('dashboard.html', 
+                                user=session['user'],
+                                courses=courses)
+            
+        except sqlite3.Error as e:
+            logger.error(f"Database error while fetching dashboard data: {str(e)}")
+            flash('Database error occurred', 'error')
+            return redirect(url_for('main.login'))
+        
+    except Exception as e:
+        logger.error(f"Dashboard page error: {str(e)}", exc_info=True)
+        flash(f'An unexpected error occurred: {str(e)}', 'error')
+        return render_template('error.html', error=str(e)), 500
+
+@main.route('/courses', methods=['GET', 'POST'])
+def courses():
+    try:
+        if 'user' not in session:
+            flash('Please log in to manage courses.', 'error')
+            return redirect(url_for('main.login'))
+
+        if request.method == 'POST':
+            name = request.form.get('name')
+            code = request.form.get('code')
+            if name:
+                add_course(session['user_id'], name, code)
+                flash('Course added successfully', 'success')
+            else:
+                flash('Course name is required', 'error')
+
+        user_courses = get_courses(session['user_id'])
+        return render_template('courses.html', courses=user_courses)
+
+    except Exception as e:
+        logger.error(f"Courses page error: {str(e)}", exc_info=True)
+        flash('An unexpected error occurred', 'error')
+        return redirect(url_for('main.dashboard'))
+
+@main.route('/courses/delete/<int:course_id>', methods=['POST'])
+def delete_course_route(course_id):
+    try:
+        if 'user' not in session:
+            flash('Please log in', 'error')
+            return redirect(url_for('main.login'))
+
+        delete_course(course_id, session['user_id'])
+        flash('Course deleted', 'success')
+        return redirect(url_for('main.courses'))
+
+    except Exception as e:
+        logger.error(f"Delete course error: {str(e)}", exc_info=True)
+        flash('An unexpected error occurred', 'error')
+        return redirect(url_for('main.courses'))
+
+@main.route('/course/add', methods=['POST'])
+def add_course():
+    try:
+        if 'user' not in session:
+            flash('Please log in first', 'error')
+            return redirect(url_for('main.login'))
+        
+        course_name = request.form.get('course_name')
+        semester = request.form.get('semester')
+        credits = request.form.get('credits')
+        
+        if not all([course_name, semester, credits]):
+            flash('Please fill in all course details', 'error')
+            return redirect(url_for('main.dashboard'))
+        
+        try:
+            if add_course(session['user_id'], course_name, semester, int(credits)):
+                flash('Course added successfully', 'success')
+            else:
+                flash('Failed to add course', 'error')
+        except ValueError:
+            flash('Credits must be a number', 'error')
+            
+        return redirect(url_for('main.dashboard'))
+        
+    except Exception as e:
+        logger.error(f"Add course error: {str(e)}")
+        flash('An unexpected error occurred', 'error')
+        return redirect(url_for('main.dashboard'))
+
+@main.route('/course/delete/<int:course_id>', methods=['POST'])
+def delete_course_route(course_id):
+    try:
+        if 'user' not in session:
+            flash('Please log in first', 'error')
+            return redirect(url_for('main.login'))
+        
+        try:
+            if delete_course(course_id, session['user_id']):
+                flash('Course deleted successfully', 'success')
+            else:
+                flash('Course not found', 'error')
+        except sqlite3.Error as e:
+            logger.error(f"Database error while deleting course: {str(e)}")
+            flash('Database error occurred', 'error')
+            
+        return redirect(url_for('main.dashboard'))
+        
+    except Exception as e:
+        logger.error(f"Delete course error: {str(e)}")
+        flash('An unexpected error occurred', 'error')
+        return redirect(url_for('main.dashboard'))
+
 @main.route('/login', methods=['GET', 'POST'])
 def login():
     try:
@@ -192,52 +310,45 @@ def delete_entry(idx):
     
     return redirect(url_for('main.journal'))
 
-@main.route('/journal/edit/<int:idx>', methods=['GET', 'POST'])
+@main.route('/edit/<int:idx>', methods=['GET', 'POST'])
 def edit_entry(idx):
     try:
         if 'user' not in session:
-            logger.debug("User not logged in")
             flash('Please log in first', 'error')
             return redirect(url_for('main.login'))
         
-        if request.method == 'POST':
-            date = request.form.get('date')
-            subject = request.form.get('subject')
-            learnt = request.form.get('learnt')
-            challenges = request.form.get('challenges')
-            schedule = request.form.get('schedule')
-            
-            if not all([date, subject, learnt, challenges, schedule]):
-                logger.debug("Missing required fields in edit form")
-                flash('Please fill in all fields', 'error')
-                return redirect(url_for('main.journal'))
-            
-            if update_journal_entry(idx, session['user_id'], date, subject, learnt, challenges, schedule):
-                logger.debug(f"Successfully updated journal entry {idx}")
-                flash('Journal entry updated successfully', 'success')
-                return redirect(url_for('main.journal'))
-            else:
-                logger.error(f"Failed to update journal entry {idx}")
-                flash('Failed to update journal entry', 'error')
-                return redirect(url_for('main.journal'))
-        
-        # Get the journal entry data for editing
         try:
-            conn = get_db()
-            c = conn.cursor()
-            entry = c.execute('SELECT * FROM journal_entries WHERE id = ? AND user_id = ?', 
-                            (idx, session['user_id'])).fetchone()
-            
-            if not entry:
-                logger.debug(f"Journal entry {idx} not found for user {session['user_id']}")
-                flash('Journal entry not found', 'error')
+            entries = get_journal_entries(session['user_id'])
+            courses = get_courses(session['user_id'])
+            if idx >= len(entries):
+                flash('Entry not found', 'error')
                 return redirect(url_for('main.journal'))
             
-            return render_template('edit_entry.html', entry=entry)
+            entry = entries[idx]
             
-        except sqlite3.Error as e:
-            logger.error(f"Database error while fetching journal entry: {str(e)}")
-            flash('Database error occurred', 'error')
+            if request.method == 'POST':
+                course_id = request.form.get('course_id')
+                date = request.form.get('date')
+                subject = request.form.get('subject')
+                learnt = request.form.get('learnt')
+                challenges = request.form.get('challenges')
+                schedule = request.form.get('schedule')
+                
+                if not all([course_id, date, subject, learnt, challenges, schedule]):
+                    flash('Please fill in all fields', 'error')
+                    return render_template('journal.html', 
+                                        user=session['user'],
+                                        entries=entries,
+                                        courses=courses,
+                                        editing=True,
+                                        current_idx=idx)
+                
+                if update_journal_entry(entry[0], session['user_id'], course_id, date, subject, learnt, challenges, schedule):
+                    flash('Entry updated successfully', 'success')
+                else:
+                    flash('Failed to update entry', 'error')
+                
+                return redirect(url_for('main.journal'))
             return redirect(url_for('main.journal'))
         finally:
             close_db(conn)

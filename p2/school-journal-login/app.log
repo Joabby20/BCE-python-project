@@ -942,3 +942,76 @@ UnboundLocalError: cannot access local variable 'conn' where it is not associate
 2025-06-05 08:59:13,529 - database - DEBUG - Getting database connection
 2025-06-05 08:59:13,549 - urls - DEBUG - Fetched 1 journal entries for user 1
 2025-06-05 08:59:13,570 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 08:59:13] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:08:46,836 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:08:46,840 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:08:46,848 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:08:48,511 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:08:48,518 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:08:53,105 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:08:53] "GET / HTTP/1.1" 200 -
+2025-06-05 09:08:55,867 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:08:55,878 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:08:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:08:55,898 - database - DEBUG - Getting database connection
+2025-06-05 09:08:55,906 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:08:55,958 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:08:55] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:11:46,828 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:11:46,837 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:11:46,842 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:11:48,456 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:11:48,479 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:11:51,745 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:11:51] "GET / HTTP/1.1" 200 -
+2025-06-05 09:11:52,247 - __main__ - ERROR - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-06-05 09:11:52,549 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:11:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 09:11:54,445 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:11:54,448 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:11:54] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:11:54,466 - database - DEBUG - Getting database connection
+2025-06-05 09:11:54,471 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:11:54,506 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:11:54] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:12:15,068 - urls - DEBUG - User not logged in
+2025-06-05 09:12:15,068 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:12:15] "[32mGET /journal HTTP/1.1[0m" 302 -
+2025-06-05 09:12:15,092 - urls - DEBUG - Rendering login page
+2025-06-05 09:12:15,127 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:12:15] "GET /login HTTP/1.1" 200 -
+2025-06-05 09:12:17,808 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 09:12:17,820 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 09:12:17,829 - database - DEBUG - Getting database connection
+2025-06-05 09:12:18,648 - business - INFO - Login successful for user: ps19
+2025-06-05 09:12:18,649 - database - DEBUG - Closing database connection
+2025-06-05 09:12:18,651 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x000001A5619C90F0>
+2025-06-05 09:12:18,653 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 09:12:18,655 - urls - DEBUG - Session contents after login: {'_flashes': [('error', 'Please log in first')], '_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 09:12:18,657 - urls - DEBUG - Redirecting to journal page
+2025-06-05 09:12:18,661 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:12:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 09:12:18,708 - database - DEBUG - Getting database connection
+2025-06-05 09:12:18,730 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:12:18,759 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:12:18] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:20:01,149 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\database.py', reloading
+2025-06-05 09:20:01,418 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:20:03,038 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:20:03,058 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:20:52,004 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 09:20:52,266 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:20:53,962 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:20:53,996 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:21:18,319 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 09:21:18,543 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:21:20,571 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:21:20,586 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:22:06,291 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:22:06,292 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:22:06,297 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:22:07,647 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:22:07,663 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:22:13,092 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:22:13] "GET / HTTP/1.1" 200 -
+2025-06-05 09:22:14,944 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:22:14,953 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:22:14] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:22:14,976 - database - DEBUG - Getting database connection
+2025-06-05 09:22:14,986 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:22:15,031 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:22:15] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:25:05,008 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\database.py', reloading
+2025-06-05 09:25:05,471 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:25:08,027 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:25:08,076 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:25:29,685 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 09:25:29,824 - werkzeug - INFO -  * Restarting with stat

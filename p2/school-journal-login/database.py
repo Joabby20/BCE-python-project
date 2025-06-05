@@ -111,11 +111,146 @@ def create_journal_entry(user_id, date, subject, learnt, challenges, schedule):
         return False
 
 def get_journal_entries(user_id):
-    conn = get_db()
-    c = conn.cursor()
-    entries = c.execute('SELECT * FROM journal_entries WHERE user_id = ? ORDER BY created_at DESC', (user_id,)).fetchall()
-    close_db(conn)
-    return [dict(entry) for entry in entries]
+    """Get journal entries for a user with course information."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        entries = c.execute('''
+            SELECT je.*, c.course_name 
+            FROM journal_entries je
+            LEFT JOIN courses c ON je.course_id = c.id
+            WHERE je.user_id = ?
+            ORDER BY je.date DESC
+        ''', (user_id,)).fetchall()
+        return entries
+    except sqlite3.Error as e:
+        logger.error(f"Database error while fetching journal entries: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def create_journal_entry(user_id, course_id, date, subject, learnt, challenges, schedule):
+    """Create a new journal entry."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        c.execute('''
+            INSERT INTO journal_entries (user_id, course_id, date, subject, learnt, challenges, schedule)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (user_id, course_id, date, subject, learnt, challenges, schedule))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while creating journal entry: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def update_journal_entry(entry_id, user_id, course_id, date, subject, learnt, challenges, schedule):
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        c.execute('''
+            UPDATE journal_entries 
+            SET course_id = ?, date = ?, subject = ?, learnt = ?, challenges = ?, schedule = ?
+            WHERE id = ? AND user_id = ?
+        ''', (course_id, date, subject, learnt, challenges, schedule, entry_id, user_id))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while updating journal entry: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def get_courses_by_user(user_id):
+    """Get all courses for a user."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        courses = c.execute('''
+            SELECT * FROM courses 
+            WHERE user_id = ?
+            ORDER BY name
+        ''', (user_id,)).fetchall()
+        return courses
+    except sqlite3.Error as e:
+        logger.error(f"Database error while fetching courses: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def add_course(user_id, name, code):
+    """Add a new course for a user."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        c.execute('''
+            INSERT INTO courses (user_id, name, code)
+            VALUES (?, ?, ?)
+        ''', (user_id, name, code))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while adding course: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def delete_course(course_id, user_id):
+    """Delete a course for a user."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        c.execute('''
+            DELETE FROM courses 
+            WHERE id = ? AND user_id = ?
+        ''', (course_id, user_id))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while deleting course: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def add_course(user_id, course_name, semester, credits):
+    """Add a new course for a user."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        c.execute('''
+            INSERT INTO courses (user_id, course_name, semester, credits)
+            VALUES (?, ?, ?, ?)
+        ''', (user_id, course_name, semester, credits))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while adding course: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
+
+def delete_course(course_id, user_id):
+    """Delete a course for a user."""
+    try:
+        conn = get_db()
+        c = conn.cursor()
+        # First check if the course belongs to the user
+        course = c.execute('''
+            SELECT * FROM courses WHERE id = ? AND user_id = ?
+        ''', (course_id, user_id)).fetchone()
+        if not course:
+            return False
+        
+        c.execute('DELETE FROM courses WHERE id = ?', (course_id,))
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error(f"Database error while deleting course: {str(e)}")
+        raise
+    finally:
+        close_db(conn)
 
 def update_journal_entry(entry_id, user_id, date, subject, learnt, challenges, schedule):
     try:
