@@ -1066,3 +1066,321 @@ UnboundLocalError: cannot access local variable 'conn' where it is not associate
 2025-06-05 09:45:18,645 - database - DEBUG - Getting database connection
 2025-06-05 09:45:18,648 - urls - DEBUG - Fetched 1 journal entries for user 1
 2025-06-05 09:45:18,650 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:45:18] "GET /journal?search_date=&search_subject=french HTTP/1.1" 200 -
+2025-06-05 09:48:58,145 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:48:58,145 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:48:58,153 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:48:59,793 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:48:59,803 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:49:05,007 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:49:05] "GET / HTTP/1.1" 200 -
+2025-06-05 09:49:06,901 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:49:06,906 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:49:06] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:49:07,017 - database - DEBUG - Getting database connection
+2025-06-05 09:49:07,040 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:49:07,244 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:49:07] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:51:25,414 - database - DEBUG - Getting database connection
+2025-06-05 09:51:25,416 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:51:25,460 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:51:25] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:51:50,008 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 37, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:51:50,045 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:51:50] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 09:51:56,087 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:51:56] "GET / HTTP/1.1" 200 -
+2025-06-05 09:51:59,121 - urls - DEBUG - User already logged in: ps19
+2025-06-05 09:51:59,126 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:51:59] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 09:51:59,144 - database - DEBUG - Getting database connection
+2025-06-05 09:51:59,149 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:51:59,158 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:51:59] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:52:06,619 - urls - ERROR - Courses page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 70, in courses
+    user_courses = get_courses(session['user_id'])
+                   ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:52:06,647 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:06] "[32mGET /courses HTTP/1.1[0m" 302 -
+2025-06-05 09:52:06,722 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 37, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:52:06,748 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:06] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 09:52:28,960 - database - DEBUG - Getting database connection
+2025-06-05 09:52:28,961 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 09:52:28,963 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:28] "GET /journal HTTP/1.1" 200 -
+2025-06-05 09:52:35,865 - urls - DEBUG - User logged out successfully
+2025-06-05 09:52:35,883 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-06-05 09:52:35,971 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:35] "GET / HTTP/1.1" 200 -
+2025-06-05 09:52:37,753 - urls - DEBUG - Rendering login page
+2025-06-05 09:52:37,807 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:37] "GET /login HTTP/1.1" 200 -
+2025-06-05 09:52:39,402 - urls - DEBUG - Login attempt for username: ps19
+2025-06-05 09:52:39,414 - business - DEBUG - Attempting login for user: ps19
+2025-06-05 09:52:39,421 - database - DEBUG - Getting database connection
+2025-06-05 09:52:40,454 - business - INFO - Login successful for user: ps19
+2025-06-05 09:52:40,459 - database - DEBUG - Closing database connection
+2025-06-05 09:52:40,465 - urls - DEBUG - handle_login returned: <sqlite3.Row object at 0x00000262401E8A90>
+2025-06-05 09:52:40,470 - urls - DEBUG - Login successful for user: ps19
+2025-06-05 09:52:40,473 - urls - DEBUG - Session contents after login: {'_flashes': [('info', 'You have been logged out')], '_permanent': True, 'user': 'ps19', 'user_id': 1}
+2025-06-05 09:52:40,480 - urls - DEBUG - Redirecting to dashboard page
+2025-06-05 09:52:40,494 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-05 09:52:40,575 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 37, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:52:40,606 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:52:40] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 09:54:37,550 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 09:54:38,058 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:54:41,537 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:54:41,547 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:56:29,148 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 09:56:29,166 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:56:29,174 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 09:56:30,758 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 09:56:30,768 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 09:56:35,759 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 38, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:56:35,773 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:56:35] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 09:56:38,877 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 38, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 09:56:38,880 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 09:56:38] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 10:00:33,898 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 10:00:33,898 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 10:00:33,908 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:00:35,951 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:00:35,995 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:00:39,611 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:00:39] "GET / HTTP/1.1" 200 -
+2025-06-05 10:00:45,838 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:00:45,842 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:00:45] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:00:45,864 - database - DEBUG - Getting database connection
+2025-06-05 10:00:45,872 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:00:45,974 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:00:45] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:01:04,092 - urls - ERROR - Dashboard page error: name 'get_courses' is not defined
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 38, in dashboard
+    courses = get_courses(session['user_id'])
+              ^^^^^^^^^^^
+NameError: name 'get_courses' is not defined
+2025-06-05 10:01:04,106 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:01:04] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 10:02:37,049 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:02:37,992 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:02:39,777 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:02:39,809 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:03:36,214 - database - DEBUG - Getting database connection
+2025-06-05 10:03:36,217 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:03:36,217 - database - DEBUG - Closing database connection
+2025-06-05 10:03:36,220 - urls - ERROR - Database error while fetching dashboard data: no such table: courses
+2025-06-05 10:03:36,225 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:36] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 10:03:36,243 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:03:36,246 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:36] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:03:36,279 - database - DEBUG - Getting database connection
+2025-06-05 10:03:36,285 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:03:36,360 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:36] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:03:56,618 - database - DEBUG - Getting database connection
+2025-06-05 10:03:56,618 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:03:56,618 - database - DEBUG - Closing database connection
+2025-06-05 10:03:56,618 - urls - ERROR - Database error while fetching dashboard data: no such table: courses
+2025-06-05 10:03:56,618 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:56] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 10:03:56,648 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:03:56,650 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:56] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:03:56,662 - database - DEBUG - Getting database connection
+2025-06-05 10:03:56,671 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:03:56,673 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:56] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:03:59,102 - database - DEBUG - Getting database connection
+2025-06-05 10:03:59,109 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:03:59,123 - database - DEBUG - Closing database connection
+2025-06-05 10:03:59,127 - urls - ERROR - Database error while fetching dashboard data: no such table: courses
+2025-06-05 10:03:59,133 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:59] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 10:03:59,173 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:03:59,175 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:59] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:03:59,231 - database - DEBUG - Getting database connection
+2025-06-05 10:03:59,248 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:03:59,282 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:59] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:04:01,121 - database - DEBUG - Getting database connection
+2025-06-05 10:04:01,125 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:04:01,149 - database - DEBUG - Closing database connection
+2025-06-05 10:04:01,168 - urls - ERROR - Database error while fetching dashboard data: no such table: courses
+2025-06-05 10:04:01,182 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:01] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 10:04:01,216 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:04:01,221 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:01] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:04:01,236 - database - DEBUG - Getting database connection
+2025-06-05 10:04:01,242 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:04:01,249 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:01] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:04:02,436 - database - DEBUG - Getting database connection
+2025-06-05 10:04:02,440 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:04:02,444 - database - DEBUG - Closing database connection
+2025-06-05 10:04:02,452 - urls - ERROR - Courses page error: no such table: courses
+Traceback (most recent call last):
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\urls.py", line 71, in courses
+    user_courses = get_courses_by_user(session['user_id'])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\PS\Documents\GitHub\BCE-python-project\p2\school-journal-login\database.py", line 171, in get_courses_by_user
+    courses = c.execute('''
+              ^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: courses
+2025-06-05 10:04:02,465 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:02] "[32mGET /courses HTTP/1.1[0m" 302 -
+2025-06-05 10:04:02,484 - database - DEBUG - Getting database connection
+2025-06-05 10:04:02,488 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:04:02,488 - database - DEBUG - Closing database connection
+2025-06-05 10:04:02,490 - urls - ERROR - Database error while fetching dashboard data: no such table: courses
+2025-06-05 10:04:02,490 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:02] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-06-05 10:04:02,508 - urls - DEBUG - User already logged in: ps19
+2025-06-05 10:04:02,515 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:02] "[32mGET /login HTTP/1.1[0m" 302 -
+2025-06-05 10:04:02,532 - database - DEBUG - Getting database connection
+2025-06-05 10:04:02,535 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:04:02,539 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:02] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:04:05,925 - database - DEBUG - Getting database connection
+2025-06-05 10:04:05,936 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:04:05,951 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:04:05] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:05:41,772 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:05:41,936 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:05:43,448 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:05:43,456 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:06:07,643 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:06:08,130 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:06:10,885 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:06:10,919 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:06:34,318 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:06:34,432 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:06:35,642 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:06:35,648 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:07:56,160 - database - DEBUG - Getting database connection
+2025-06-05 10:07:56,183 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:07:56,191 - database - DEBUG - Closing database connection
+2025-06-05 10:07:56,259 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:07:56] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 10:07:56,693 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:07:56] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 10:07:56,710 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:07:56] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 10:07:56,934 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:07:56] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 10:07:56,959 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:07:56] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:09:35,140 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\database.py', reloading
+2025-06-05 10:09:35,412 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:09:36,689 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:09:36,718 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:10:36,874 - database - DEBUG - Getting database connection
+2025-06-05 10:10:36,966 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:10:37,024 - database - DEBUG - Closing database connection
+2025-06-05 10:10:37,097 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:37] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 10:10:37,428 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:37] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 10:10:37,490 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:37] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 10:10:37,601 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:37] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:10:37,688 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:37] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:10:40,932 - database - DEBUG - Getting database connection
+2025-06-05 10:10:40,937 - database - ERROR - Database error while fetching courses: no such table: courses
+2025-06-05 10:10:40,942 - database - DEBUG - Closing database connection
+2025-06-05 10:10:41,025 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:41] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-06-05 10:10:41,050 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 10:10:41,087 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 10:10:41,167 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:10:41,251 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:10:41] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:11:54,048 - database - DEBUG - Getting database connection
+2025-06-05 10:11:54,048 - database - DEBUG - Closing database connection
+2025-06-05 10:11:54,111 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:11:54] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:12:03,015 - database - DEBUG - Getting database connection
+2025-06-05 10:12:03,038 - database - DEBUG - Closing database connection
+2025-06-05 10:12:03,089 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:03] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:12:22,417 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:22] "[35m[1mPOST /courses HTTP/1.1[0m" 500 -
+2025-06-05 10:12:22,494 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:22] "GET /courses?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-06-05 10:12:22,603 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:22] "GET /courses?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-06-05 10:12:22,689 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:22] "GET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-06-05 10:12:22,748 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:12:22] "[36mGET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:13:01,251 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:13:01,450 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:13:07,279 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:13:07,288 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:13:37,209 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:13:37] "[35m[1mPOST /courses HTTP/1.1[0m" 500 -
+2025-06-05 10:13:37,692 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:13:37] "[36mGET /courses?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 10:13:37,702 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:13:37] "[36mGET /courses?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 10:13:37,829 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:13:37] "[36mGET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:13:37,903 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:13:37] "[36mGET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:15:21,743 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:15:21,875 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:15:23,501 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:15:23,514 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:15:56,077 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:15:56,514 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:17:13,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-06-05 10:17:13,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 10:17:13,121 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:17:14,397 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:17:14,409 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:17:20,371 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:17:20] "[35m[1mPOST /courses HTTP/1.1[0m" 500 -
+2025-06-05 10:17:20,725 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:17:20] "[36mGET /courses?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-06-05 10:17:20,790 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:17:20] "[36mGET /courses?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-06-05 10:17:20,833 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:17:20] "[36mGET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:17:20,852 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:17:20] "[36mGET /courses?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-06-05 10:19:33,752 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\database.py', reloading
+2025-06-05 10:19:34,445 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:19:36,105 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:19:36,115 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:19:57,669 - database - DEBUG - Getting database connection
+2025-06-05 10:19:57,683 - database - DEBUG - Closing database connection
+2025-06-05 10:19:57,683 - database - DEBUG - Getting database connection
+2025-06-05 10:19:57,687 - database - DEBUG - Closing database connection
+2025-06-05 10:19:57,734 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:19:57] "POST /courses HTTP/1.1" 200 -
+2025-06-05 10:20:15,372 - database - DEBUG - Getting database connection
+2025-06-05 10:20:15,394 - database - DEBUG - Closing database connection
+2025-06-05 10:20:15,399 - database - DEBUG - Getting database connection
+2025-06-05 10:20:15,434 - database - DEBUG - Closing database connection
+2025-06-05 10:20:15,448 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:15] "POST /courses HTTP/1.1" 200 -
+2025-06-05 10:20:19,358 - database - DEBUG - Getting database connection
+2025-06-05 10:20:19,359 - database - DEBUG - Closing database connection
+2025-06-05 10:20:19,362 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:19] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:20:21,311 - database - DEBUG - Getting database connection
+2025-06-05 10:20:21,313 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:20:21,514 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:21] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:20:34,527 - database - DEBUG - Getting database connection
+2025-06-05 10:20:34,530 - database - DEBUG - Closing database connection
+2025-06-05 10:20:34,550 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:34] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:20:37,153 - database - DEBUG - Getting database connection
+2025-06-05 10:20:37,155 - database - DEBUG - Closing database connection
+2025-06-05 10:20:37,174 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:37] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:20:41,138 - database - DEBUG - Getting database connection
+2025-06-05 10:20:41,146 - database - DEBUG - Closing database connection
+2025-06-05 10:20:41,175 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:41] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:20:43,863 - database - DEBUG - Getting database connection
+2025-06-05 10:20:43,871 - database - DEBUG - Closing database connection
+2025-06-05 10:20:43,891 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:43] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:20:45,703 - database - DEBUG - Getting database connection
+2025-06-05 10:20:45,709 - database - DEBUG - Closing database connection
+2025-06-05 10:20:45,722 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:45] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:20:47,273 - database - DEBUG - Getting database connection
+2025-06-05 10:20:47,277 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:20:47,287 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:20:47] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:21:01,078 - database - DEBUG - Getting database connection
+2025-06-05 10:21:01,080 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:21:01,083 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:21:01] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:23:57,505 - werkzeug - INFO -  * Detected change in 'c:\\Users\\PS\\Documents\\GitHub\\BCE-python-project\\p2\\school-journal-login\\urls.py', reloading
+2025-06-05 10:23:57,793 - werkzeug - INFO -  * Restarting with stat
+2025-06-05 10:23:59,400 - werkzeug - WARNING -  * Debugger is active!
+2025-06-05 10:23:59,419 - werkzeug - INFO -  * Debugger PIN: 800-876-390
+2025-06-05 10:26:05,387 - database - DEBUG - Getting database connection
+2025-06-05 10:26:05,403 - database - DEBUG - Closing database connection
+2025-06-05 10:26:05,579 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:26:05] "GET /dashboard HTTP/1.1" 200 -
+2025-06-05 10:26:08,905 - database - DEBUG - Getting database connection
+2025-06-05 10:26:08,913 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:26:08,916 - database - DEBUG - Getting database connection
+2025-06-05 10:26:08,935 - database - DEBUG - Closing database connection
+2025-06-05 10:26:09,070 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:26:09] "GET /journal HTTP/1.1" 200 -
+2025-06-05 10:26:11,950 - database - DEBUG - Getting database connection
+2025-06-05 10:26:11,952 - database - DEBUG - Closing database connection
+2025-06-05 10:26:11,969 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:26:11] "GET /courses HTTP/1.1" 200 -
+2025-06-05 10:26:15,346 - database - DEBUG - Getting database connection
+2025-06-05 10:26:15,355 - urls - DEBUG - Fetched 1 journal entries for user 1
+2025-06-05 10:26:15,363 - database - DEBUG - Getting database connection
+2025-06-05 10:26:15,383 - database - DEBUG - Closing database connection
+2025-06-05 10:26:15,402 - werkzeug - INFO - 127.0.0.1 - - [05/Jun/2025 10:26:15] "GET /journal HTTP/1.1" 200 -

@@ -2,14 +2,16 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from business import handle_login, handle_register, handle_profile_update
 from database import (
     get_db,
-    get_user_by_username,
     get_user_by_id,
     create_user,
     create_journal_entry,
     get_journal_entries,
     update_journal_entry,
     delete_journal_entry,
-    close_db
+    close_db,
+    get_courses_by_user,
+    add_course,
+    delete_course
 )
 import logging
 import sqlite3
@@ -28,100 +30,35 @@ def home():
 
 @main.route('/dashboard')
 def dashboard():
-    try:
-        if 'user' not in session:
-            flash('Please log in first', 'error')
-            return redirect(url_for('main.login'))
-        
-        try:
-            courses = get_courses(session['user_id'])
-            logger.debug(f"Fetched {len(courses)} courses for user {session['user_id']}")
-            
-            return render_template('dashboard.html', 
-                                user=session['user'],
-                                courses=courses)
-            
-        except sqlite3.Error as e:
-            logger.error(f"Database error while fetching dashboard data: {str(e)}")
-            flash('Database error occurred', 'error')
-            return redirect(url_for('main.login'))
-        
-    except Exception as e:
-        logger.error(f"Dashboard page error: {str(e)}", exc_info=True)
-        flash(f'An unexpected error occurred: {str(e)}', 'error')
-        return render_template('error.html', error=str(e)), 500
+    if 'user' not in session:
+        return redirect(url_for('main.login'))
+    
+    courses = get_courses_by_user(session['user_id'])
+    return render_template('dashboard.html', 
+                        user=session['user'],
+                        courses=courses)
 
 @main.route('/courses', methods=['GET', 'POST'])
 def courses():
-    try:
-        if 'user' not in session:
-            flash('Please log in to manage courses.', 'error')
-            return redirect(url_for('main.login'))
+    if 'user' not in session:
+        return redirect(url_for('main.login'))
 
-        if request.method == 'POST':
-            name = request.form.get('name')
-            code = request.form.get('code')
-            if name:
-                add_course(session['user_id'], name, code)
-                flash('Course added successfully', 'success')
-            else:
-                flash('Course name is required', 'error')
+    if request.method == 'POST':
+        name = request.form.get('name')
+        code = request.form.get('code')
+        if name:
+            add_course(session['user_id'], name, code)
 
-        user_courses = get_courses(session['user_id'])
-        return render_template('courses.html', courses=user_courses)
-
-    except Exception as e:
-        logger.error(f"Courses page error: {str(e)}", exc_info=True)
-        flash('An unexpected error occurred', 'error')
-        return redirect(url_for('main.dashboard'))
+    user_courses = get_courses_by_user(session['user_id'])
+    return render_template('courses.html', courses=user_courses)
 
 @main.route('/courses/delete/<int:course_id>', methods=['POST'])
 def delete_course_route(course_id):
-    try:
-        if 'user' not in session:
-            flash('Please log in', 'error')
-            return redirect(url_for('main.login'))
+    if 'user' not in session:
+        return redirect(url_for('main.login'))
 
-        delete_course(course_id, session['user_id'])
-        flash('Course deleted', 'success')
-        return redirect(url_for('main.courses'))
-
-    except Exception as e:
-        logger.error(f"Delete course error: {str(e)}", exc_info=True)
-        flash('An unexpected error occurred', 'error')
-        return redirect(url_for('main.courses'))
-
-@main.route('/course/add', methods=['POST'])
-def add_course():
-    try:
-        if 'user' not in session:
-            flash('Please log in first', 'error')
-            return redirect(url_for('main.login'))
-        
-        course_name = request.form.get('course_name')
-        semester = request.form.get('semester')
-        credits = request.form.get('credits')
-        
-        if not all([course_name, semester, credits]):
-            flash('Please fill in all course details', 'error')
-            return redirect(url_for('main.dashboard'))
-        
-        try:
-            if add_course(session['user_id'], course_name, semester, int(credits)):
-                flash('Course added successfully', 'success')
-            else:
-                flash('Failed to add course', 'error')
-        except ValueError:
-            flash('Credits must be a number', 'error')
-            
-        return redirect(url_for('main.dashboard'))
-        
-    except Exception as e:
-        logger.error(f"Add course error: {str(e)}")
-        flash('An unexpected error occurred', 'error')
-        return redirect(url_for('main.dashboard'))
-
-
+    delete_course(session['user_id'], course_id)
+    return redirect(url_for('main.courses'))
 
 @main.route('/login', methods=['GET', 'POST'])
 def login():
@@ -240,6 +177,7 @@ def journal():
             flash('Please log in first', 'error')
             return redirect(url_for('main.login'))
         
+        # Get journal entries
         with get_db() as conn:
             c = conn.cursor()
             entries = c.execute('''
@@ -252,9 +190,12 @@ def journal():
                 logger.debug(f"Fetched {len(entries)} journal entries for user {session['user_id']}")
             else:
                 logger.debug(f"No journal entries found for user {session['user_id']}")
-                
-            return render_template('journal.html', entries=entries)
-            
+
+        # Get courses
+        courses = get_courses_by_user(session['user_id'])
+        
+        return render_template('journal.html', entries=entries, courses=courses)
+        
     except sqlite3.Error as e:
         logger.error(f"Database error while fetching journal entries: {str(e)}", exc_info=True)
         flash('Database error occurred', 'error')

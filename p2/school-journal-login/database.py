@@ -209,33 +209,6 @@ def delete_course(course_id, user_id):
         conn.commit()
         return True
     except sqlite3.Error as e:
-        logger.error(f"Database error while deleting course: {str(e)}")
-        raise
-    finally:
-        close_db(conn)
-
-def add_course(user_id, course_name, semester, credits):
-    """Add a new course for a user."""
-    try:
-        conn = get_db()
-        c = conn.cursor()
-        c.execute('''
-            INSERT INTO courses (user_id, course_name, semester, credits)
-            VALUES (?, ?, ?, ?)
-        ''', (user_id, course_name, semester, credits))
-        conn.commit()
-        return True
-    except sqlite3.Error as e:
-        logger.error(f"Database error while adding course: {str(e)}")
-        raise
-    finally:
-        close_db(conn)
-
-def delete_course(course_id, user_id):
-    """Delete a course for a user."""
-    try:
-        conn = get_db()
-        c = conn.cursor()
         # First check if the course belongs to the user
         course = c.execute('''
             SELECT * FROM courses WHERE id = ? AND user_id = ?

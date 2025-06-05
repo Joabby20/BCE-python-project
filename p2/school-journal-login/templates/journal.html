@@ -1,204 +1,147 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>School Journal</title>
-    <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        
-        .container {
-            background: #fff;
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
-            min-width: 320px;
-            max-width: 800px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #2d3a4b;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-        
-        .welcome-message {
-            color: #1976d2;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .form-group {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #2d3a4b;
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #b0bec5;
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            transition: border 0.2s;
-        }
-        
-        input:focus, textarea:focus {
-            border-color: #1976d2;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 0.75rem;
-            background: #1976d2;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .submit-btn:hover {
-            background: #1565c0;
-        }
-        
-        .entries {
-            width: 100%;
-            margin-top: 2rem;
-        }
-        
-        .entry {
-            background: #f5f5f5;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        
-        .entry-date {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .entry-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .edit-btn, .delete-btn {
-            padding: 0.25rem 0.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .edit-btn {
-            background: #4caf50;
-            color: white;
-        }
-        
-        .delete-btn {
-            background: #f44336;
-            color: white;
-        }
-        
-        .search-bar {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #b0bec5;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        
-        .search-btn {
-            margin-top: 0.5rem;
-            padding: 0.5rem;
-            background: #1976d2;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .search-btn:hover {
-            background: #1565c0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>School Journal</h2>
-        <div class="welcome-message">
-            Welcome {{ session['user'] }}! Start adding your first journal entry.
+{% extends 'base.html' %}
+
+{% block title %}Journal Entries{% endblock %}
+
+{% block content %}
+    <div class="row mb-4">
+        <div class="col">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">Journal Entries</h2>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEntryModal">
+                        <i class="bi bi-plus-lg"></i> New Entry
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="search_date" placeholder="Search by date">
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" id="search_course">
+                                <option value="">All Courses</option>
+                                {% for course in courses %}
+                                <option value="{{ course.id }}">{{ course.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary w-100" onclick="searchEntries()">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entries List -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Course</th>
+                                    <th>Subject</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="entriesTable">
+                                {% for entry in entries %}
+                                <tr>
+                                    <td>{{ entry.date }}</td>
+                                    <td>{{ entry.name }}</td>
+                                    <td>{{ entry.subject }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                             <button type="button" class="btn btn-sm btn-primary" onclick="editEntry('{{ entry.id }}')">
+                                                 <i class="bi bi-pencil"></i>
+                                             </button>
+                                             <button type="button" class="btn btn-sm btn-danger" onclick="deleteEntry('{{ entry.id }}')">
+                                                 <i class="bi bi-trash"></i>
+                                             </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form action="{{ url_for('journal') }}" method="POST">
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" required>
+    </div>
+
+    <!-- Add Entry Modal -->
+    <div class="modal fade" id="addEntryModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Journal Entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ url_for('main.journal') }}" method="POST" id="entryForm">
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="course_id" class="form-label">Course</label>
+                            <select class="form-select" id="course_id" name="course_id" required>
+                                <option value="">-- Select a course --</option>
+                                {% for course in courses %}
+                                <option value="{{ course.id }}">{{ course.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="learnt" class="form-label">What did you learn?</label>
+                            <textarea class="form-control" id="learnt" name="learnt" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="challenges" class="form-label">Challenges</label>
+                            <textarea class="form-control" id="challenges" name="challenges" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="schedule" class="form-label">Schedule for Tomorrow</label>
+                            <textarea class="form-control" id="schedule" name="schedule" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Entry</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="course">Course:</label>
-                <select name="course_id" id="course" required>
-                    <option value="">-- Select a course --</option>
-                    {% for course in courses %}
-                        <option value="{{ course.id }}">{{ course.course_name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-                <label for="learnt">What did you learn?</label>
-                <textarea id="learnt" name="learnt" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="challenges">What challenges did you face?</label>
-                <textarea id="challenges" name="challenges" rows="3" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="schedule">What's your schedule for tomorrow?</label>
-                <textarea id="schedule" name="schedule" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Add Entry</button>
-        </form>
-        
-        <div class="search-bar">
-            <input type="text" class="search-input" id="search_date" placeholder="Search by date (YYYY-MM-DD)">
+        </div>
+    </div>
+
+    <script>
+    function searchEntries() {
+        // Add search functionality here
+        alert('Search functionality will be implemented');
+    }
+
+    function editEntry(entryId) {
+        // Add edit functionality here
+        alert('Edit functionality will be implemented');
+    }
+
+    function deleteEntry(entryId) {
+        if (confirm('Are you sure you want to delete this entry?')) {
+            // Add delete functionality here
+            alert('Delete functionality will be implemented');
+        }
+    }
+    </script>
+{% endblock %}
             <input type="text" class="search-input" id="search_subject" placeholder="Search by subject">
             <button type="button" class="search-btn" onclick="searchEntries()">Search</button>
         </div>
